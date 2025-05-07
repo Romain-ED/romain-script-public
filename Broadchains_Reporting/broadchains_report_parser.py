@@ -1,14 +1,27 @@
 #!/usr/bin/env python3
 """
-CSV Processor - Process large CSV files and perform data manipulations
-This script processes CSV files by:
-1. Keeping only required columns
-2. Adding three new calculated columns (Tag, Total Parts, Part Num)
-3. Breaking down output into one file per day based on date_received
-4. Providing summary statistics about the processing
+Broadchains Report Parser v1.0.0
+
+Description:
+    This script processes CSV files from Broadchains reporting system by:
+    1. Keeping only required columns
+    2. Adding three new calculated columns (Tag, Total Parts, Part Num)
+    3. Breaking down output into one file per day based on date_received
+    4. Providing summary statistics about the processing
+
+Author: Romain EDIN
+Company: Vonage
+Created: May 2025
 
 Usage:
-    python csv_processor.py input.csv [output_dir]
+    python broadchains_report_parser.py input.csv [output_dir]
+
+Changelog:
+    v1.0.0 (2025-05-08) - Initial version
+    - Basic CSV processing functionality
+    - Split files by date
+    - Added UDH parsing logic
+    - Added colorized logging
 """
 
 import os
@@ -221,6 +234,7 @@ def process_csv(input_file, output_dir):
             date_groups = df.groupby('date_key')
             logger.info(f"{Fore.BLUE}Writing data to {len(date_groups)} date-specific files...{Style.RESET_ALL}")
             
+            for date, group in date_groups:
                 # Remove the temporary date_key column
                 group = group.drop('date_key', axis=1)
                 
@@ -282,11 +296,12 @@ def main():
     """Main function to handle command-line arguments and start processing."""
     # Print welcome banner
     print(f"\n{Fore.CYAN}{'='*80}")
-    print(f"{Fore.CYAN}{'CSV PROCESSOR':^80}")
+    print(f"{Fore.CYAN}{'BROADCHAINS REPORT PARSER v1.0.0':^80}")
+    print(f"{Fore.CYAN}{'Created by Romain EDIN for Vonage':^80}")
     print(f"{Fore.CYAN}{'='*80}\n")
     
     if len(sys.argv) < 2:
-        logger.error(f"{Fore.RED}Usage: python csv_processor.py input.csv [output_dir]{Style.RESET_ALL}")
+        logger.error(f"{Fore.RED}Usage: python broadchains_report_parser.py input.csv [output_dir]{Style.RESET_ALL}")
         sys.exit(1)
     
     input_file = sys.argv[1]
