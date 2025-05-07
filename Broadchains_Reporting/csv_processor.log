@@ -1,0 +1,1105 @@
+2025-05-07 19:55:06,448 - INFO - CSV Processor started
+2025-05-07 19:55:06,449 - INFO - Python version: 3.13.3 (main, Apr  8 2025, 13:54:08) [Clang 16.0.0 (clang-1600.0.26.6)]
+2025-05-07 19:55:06,450 - INFO - Starting to process file: input.csv
+2025-05-07 19:55:06,450 - INFO - Output directory: output
+2025-05-07 19:55:06,450 - INFO - Reading CSV file using pandas with chunking...
+2025-05-07 19:55:06,450 - ERROR - Input file not found: input.csv
+2025-05-07 19:55:06,450 - ERROR - CSV processing failed. Check logs for details.
+2025-05-07 19:55:28,689 - INFO - CSV Processor started
+2025-05-07 19:55:28,690 - INFO - Python version: 3.13.3 (main, Apr  8 2025, 13:54:08) [Clang 16.0.0 (clang-1600.0.26.6)]
+2025-05-07 19:55:28,690 - INFO - Starting to process file: report_10_lines.csv
+2025-05-07 19:55:28,690 - INFO - Output directory: output
+2025-05-07 19:55:28,690 - INFO - Reading CSV file using pandas with chunking...
+2025-05-07 19:55:28,690 - INFO - Input file size: 0.01 MB
+2025-05-07 19:55:28,690 - ERROR - Missing required columns: ['concatenated']
+2025-05-07 19:55:28,690 - ERROR - CSV processing failed. Check logs for details.
+2025-05-07 19:56:02,177 - INFO - CSV Processor started
+2025-05-07 19:56:02,177 - INFO - Python version: 3.13.3 (main, Apr  8 2025, 13:54:08) [Clang 16.0.0 (clang-1600.0.26.6)]
+2025-05-07 19:56:02,177 - INFO - Starting to process file: report_10_lines.csv
+2025-05-07 19:56:02,177 - INFO - Output directory: output
+2025-05-07 19:56:02,177 - INFO - Reading CSV file using pandas with chunking...
+2025-05-07 19:56:02,177 - INFO - Input file size: 0.01 MB
+2025-05-07 19:56:02,182 - INFO - Processing chunk 1 with 9 rows...
+2025-05-07 19:56:02,185 - INFO - Adding new calculated columns...
+2025-05-07 19:56:02,186 - INFO - Parsing dates to split by day...
+2025-05-07 19:56:02,193 - INFO - Processed 9 rows so far...
+2025-05-07 19:56:02,193 - INFO - ==================================================
+2025-05-07 19:56:02,193 - INFO - Processing Summary:
+2025-05-07 19:56:02,193 - INFO - Total rows processed: 9
+2025-05-07 19:56:02,193 - INFO - Number of output files created: 1
+2025-05-07 19:56:02,193 - INFO - Processing time: 0.02 seconds
+2025-05-07 19:56:02,193 - INFO - Files created:
+2025-05-07 19:56:02,193 - INFO -   - processed_2025-04-28.csv: 9 rows, 0.00 MB
+2025-05-07 19:56:02,193 - INFO - Total output size: 0.00 MB
+2025-05-07 19:56:02,193 - INFO - ==================================================
+2025-05-07 19:56:02,193 - INFO - CSV processing completed successfully!
+2025-05-07 20:08:10,410 - INFO - CSV Processor started
+2025-05-07 20:08:10,411 - INFO - Python version: 3.13.3 (main, Apr  8 2025, 13:54:08) [Clang 16.0.0 (clang-1600.0.26.6)]
+2025-05-07 20:08:10,411 - INFO - Starting to process file: report_10_lines.csv
+2025-05-07 20:08:10,411 - INFO - Output directory: output
+2025-05-07 20:08:10,411 - INFO - Reading CSV file using pandas with chunking...
+2025-05-07 20:08:10,411 - INFO - Input file size: 0.01 MB
+2025-05-07 20:08:10,416 - INFO - Processing chunk 1 with 9 rows...
+2025-05-07 20:08:10,419 - INFO - Adding new calculated columns...
+2025-05-07 20:08:10,420 - INFO - Parsing dates to split by day...
+2025-05-07 20:08:10,428 - INFO - Processed 9 rows so far...
+2025-05-07 20:08:10,428 - INFO - ==================================================
+2025-05-07 20:08:10,428 - INFO - Processing Summary:
+2025-05-07 20:08:10,428 - INFO - Total rows processed: 9
+2025-05-07 20:08:10,428 - INFO - Number of output files created: 1
+2025-05-07 20:08:10,428 - INFO - Processing time: 0.02 seconds
+2025-05-07 20:08:10,428 - INFO - Files created:
+2025-05-07 20:08:10,429 - INFO -   - processed_2025-04-28.csv: 9 rows, 0.01 MB
+2025-05-07 20:08:10,429 - INFO - Total output size: 0.01 MB
+2025-05-07 20:08:10,429 - INFO - ==================================================
+2025-05-07 20:08:10,429 - INFO - CSV processing completed successfully!
+2025-05-07 20:13:44,324 - INFO - CSV Processor started
+2025-05-07 20:13:44,324 - INFO - Python version: 3.13.3 (main, Apr  8 2025, 13:54:08) [Clang 16.0.0 (clang-1600.0.26.6)]
+2025-05-07 20:13:44,324 - INFO - Starting to process file: report_10_lines.csv
+2025-05-07 20:13:44,324 - INFO - Output directory: output
+2025-05-07 20:13:44,324 - INFO - Reading CSV file using pandas with chunking...
+2025-05-07 20:13:44,324 - INFO - Input file size: 0.01 MB
+2025-05-07 20:13:44,329 - INFO - Processing chunk 1 with 9 rows...
+2025-05-07 20:13:44,332 - INFO - Adding new calculated columns...
+2025-05-07 20:13:44,333 - INFO - Parsing dates to split by day...
+2025-05-07 20:13:44,339 - INFO - Processed 9 rows so far...
+2025-05-07 20:13:44,340 - INFO - ==================================================
+2025-05-07 20:13:44,340 - INFO - Processing Summary:
+2025-05-07 20:13:44,340 - INFO - Total rows processed: 9
+2025-05-07 20:13:44,340 - INFO - Number of output files created: 1
+2025-05-07 20:13:44,340 - INFO - Processing time: 0.02 seconds
+2025-05-07 20:13:44,340 - INFO - Files created:
+2025-05-07 20:13:44,340 - INFO -   - processed_2025-04-28.csv: 9 rows, 0.01 MB
+2025-05-07 20:13:44,340 - INFO - Total output size: 0.01 MB
+2025-05-07 20:13:44,340 - INFO - ==================================================
+2025-05-07 20:13:44,340 - INFO - CSV processing completed successfully!
+2025-05-07 20:16:29,444 - INFO - CSV Processor started
+2025-05-07 20:16:29,445 - INFO - Python version: 3.13.3 (main, Apr  8 2025, 13:54:08) [Clang 16.0.0 (clang-1600.0.26.6)]
+2025-05-07 20:16:29,445 - INFO - Starting to process file: report_10_lines.csv
+2025-05-07 20:16:29,445 - INFO - Output directory: output
+2025-05-07 20:16:29,445 - INFO - Reading CSV file using pandas with chunking...
+2025-05-07 20:16:29,445 - INFO - Input file size: 0.01 MB
+2025-05-07 20:16:29,450 - INFO - Processing chunk 1 with 9 rows...
+2025-05-07 20:16:29,453 - INFO - Adding new calculated columns...
+2025-05-07 20:16:29,455 - INFO - Empty UDH values: 9, Empty Tag values: 9
+2025-05-07 20:16:29,455 - INFO - Parsing dates to split by day...
+2025-05-07 20:16:29,462 - INFO - Processed 9 rows so far...
+2025-05-07 20:16:29,462 - INFO - ==================================================
+2025-05-07 20:16:29,462 - INFO - Processing Summary:
+2025-05-07 20:16:29,462 - INFO - Total rows processed: 9
+2025-05-07 20:16:29,462 - INFO - Number of output files created: 1
+2025-05-07 20:16:29,462 - INFO - Processing time: 0.02 seconds
+2025-05-07 20:16:29,462 - INFO - Files created:
+2025-05-07 20:16:29,462 - INFO -   - processed_2025-04-28.csv: 9 rows, 0.01 MB
+2025-05-07 20:16:29,462 - INFO - Total output size: 0.01 MB
+2025-05-07 20:16:29,462 - INFO - ==================================================
+2025-05-07 20:16:29,462 - INFO - CSV processing completed successfully!
+2025-05-07 20:18:12,665 - INFO - CSV Processor started
+2025-05-07 20:18:12,665 - INFO - Python version: 3.13.3 (main, Apr  8 2025, 13:54:08) [Clang 16.0.0 (clang-1600.0.26.6)]
+2025-05-07 20:18:12,665 - INFO - Starting to process file: report_10_lines.csv
+2025-05-07 20:18:12,665 - INFO - Output directory: output
+2025-05-07 20:18:12,665 - INFO - Reading CSV file using pandas with chunking...
+2025-05-07 20:18:12,665 - INFO - Input file size: 0.01 MB
+2025-05-07 20:18:12,669 - INFO - Processing chunk 1 with 9 rows...
+2025-05-07 20:18:12,672 - INFO - Adding new calculated columns...
+2025-05-07 20:18:12,674 - INFO - Empty UDH values: 9, Empty Tag values: 9
+2025-05-07 20:18:12,674 - INFO - Parsing dates to split by day...
+2025-05-07 20:18:12,679 - INFO - Processed 9 rows so far...
+2025-05-07 20:18:12,679 - INFO - ==================================================
+2025-05-07 20:18:12,679 - INFO - Processing Summary:
+2025-05-07 20:18:12,679 - INFO - Total rows processed: 9
+2025-05-07 20:18:12,680 - INFO - Number of output files created: 1
+2025-05-07 20:18:12,680 - INFO - Processing time: 0.01 seconds
+2025-05-07 20:18:12,680 - INFO - Files created:
+2025-05-07 20:18:12,680 - INFO -   - processed_2025-04-28.csv: 9 rows, 0.00 MB
+2025-05-07 20:18:12,680 - INFO - Total output size: 0.00 MB
+2025-05-07 20:18:12,680 - INFO - ==================================================
+2025-05-07 20:18:12,680 - INFO - CSV processing completed successfully!
+2025-05-07 21:17:09,323 - INFO - CSV Processor started
+2025-05-07 21:17:09,323 - INFO - Python version: 3.13.3 (main, Apr  8 2025, 13:54:08) [Clang 16.0.0 (clang-1600.0.26.6)]
+2025-05-07 21:17:09,323 - INFO - Starting to process file: /Users/romain/Library/CloudStorage/GoogleDrive-romain.edin@vonage.com/My Drive/Accounts/Broadchain/report_SMS_160c93ff_20250507 4.csv
+2025-05-07 21:17:09,323 - INFO - Output directory: output
+2025-05-07 21:17:09,323 - INFO - Reading CSV file using pandas with chunking...
+2025-05-07 21:17:09,323 - INFO - Input file size: 512.69 MB
+2025-05-07 21:17:09,953 - INFO - Processing chunk 1 with 100000 rows...
+2025-05-07 21:17:10,191 - INFO - Adding new calculated columns...
+2025-05-07 21:17:10,444 - INFO - Empty UDH values: 99723, Empty Tag values: 99723
+2025-05-07 21:17:10,465 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:10,465 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:10,467 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:10,467 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:10,483 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:10,483 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:10,486 - INFO - Parsing dates to split by day...
+2025-05-07 21:17:11,359 - INFO - Processed 100000 rows so far...
+2025-05-07 21:17:11,846 - INFO - Processing chunk 2 with 100000 rows...
+2025-05-07 21:17:12,086 - INFO - Adding new calculated columns...
+2025-05-07 21:17:12,338 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:12,339 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:12,342 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:12,342 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:12,344 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:12,344 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:12,349 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:12,349 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:12,356 - INFO - Parsing dates to split by day...
+2025-05-07 21:17:13,242 - INFO - Processed 200000 rows so far...
+2025-05-07 21:17:13,722 - INFO - Processing chunk 3 with 100000 rows...
+2025-05-07 21:17:13,962 - INFO - Adding new calculated columns...
+2025-05-07 21:17:14,217 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:14,217 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:14,224 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:14,224 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:14,226 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:14,226 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:14,226 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:14,226 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:14,226 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:14,226 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:14,227 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:14,227 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:14,228 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:14,228 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:14,229 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:14,229 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:14,231 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:14,231 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:14,233 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:14,233 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:14,233 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:14,233 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:14,234 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:14,234 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:14,235 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:14,235 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:14,236 - INFO - Parsing dates to split by day...
+2025-05-07 21:17:15,097 - INFO - Processed 300000 rows so far...
+2025-05-07 21:17:15,575 - INFO - Processing chunk 4 with 100000 rows...
+2025-05-07 21:17:15,812 - INFO - Adding new calculated columns...
+2025-05-07 21:17:16,065 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,065 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,066 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,066 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,069 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,070 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,071 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,071 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,071 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,071 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,071 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,071 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,072 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,072 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,072 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,072 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,072 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,072 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,072 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,072 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,073 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,073 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,073 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,073 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,073 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,073 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,074 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,074 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,075 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,075 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,075 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,075 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,076 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,076 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,080 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,080 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,081 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,081 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,082 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,082 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,083 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:16,083 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:16,084 - INFO - Parsing dates to split by day...
+2025-05-07 21:17:16,953 - INFO - Processed 400000 rows so far...
+2025-05-07 21:17:17,467 - INFO - Processing chunk 5 with 100000 rows...
+2025-05-07 21:17:17,771 - INFO - Adding new calculated columns...
+2025-05-07 21:17:18,074 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,074 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,074 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,074 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,075 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,075 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,076 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,076 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,079 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,079 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,080 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,080 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,082 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,082 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,082 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,082 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,082 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,082 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,083 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,083 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,083 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,083 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,083 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,083 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,083 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,083 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,087 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,087 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,087 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,087 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,088 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,088 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,089 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,089 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,089 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,089 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,090 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,090 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,091 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,091 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,092 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:18,092 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:18,094 - INFO - Parsing dates to split by day...
+2025-05-07 21:17:19,005 - INFO - Processed 500000 rows so far...
+2025-05-07 21:17:19,522 - INFO - Processing chunk 6 with 100000 rows...
+2025-05-07 21:17:19,755 - INFO - Adding new calculated columns...
+2025-05-07 21:17:20,010 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:20,010 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:20,013 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:20,013 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:20,013 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:20,013 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:20,013 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:20,013 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:20,015 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:20,015 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:20,015 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:20,015 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:20,017 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:20,017 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:20,018 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:20,018 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:20,018 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:20,018 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:20,019 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:20,019 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:20,020 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:20,020 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:20,025 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:20,025 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:20,025 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:20,025 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:20,026 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:20,026 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:20,027 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:20,027 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:20,027 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:20,027 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:20,028 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:20,028 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:20,028 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:20,028 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:20,029 - INFO - Parsing dates to split by day...
+2025-05-07 21:17:21,027 - INFO - Processed 600000 rows so far...
+2025-05-07 21:17:21,594 - INFO - Processing chunk 7 with 100000 rows...
+2025-05-07 21:17:21,836 - INFO - Adding new calculated columns...
+2025-05-07 21:17:22,121 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,121 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,121 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,121 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,123 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,123 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,124 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,124 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,124 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,124 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,125 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,125 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,125 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,125 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,127 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,127 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,129 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,129 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,131 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,131 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,131 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,131 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,132 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,132 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,134 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,134 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,135 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,135 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,136 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,136 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,137 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,137 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,140 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,140 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,141 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,141 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,141 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,141 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,142 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,142 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,142 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,142 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,143 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,143 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,143 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,143 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,144 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,144 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,144 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 21:17:22,144 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 21:17:22,145 - INFO - Parsing dates to split by day...
+2025-05-07 23:08:32,972 - INFO - CSV Processor started
+2025-05-07 23:08:32,972 - INFO - Python version: 3.13.3 (main, Apr  8 2025, 13:54:08) [Clang 16.0.0 (clang-1600.0.26.6)]
+2025-05-07 23:08:32,972 - INFO - Starting to process file: /Users/romain/Library/CloudStorage/GoogleDrive-romain.edin@vonage.com/My Drive/Accounts/Broadchain/report_SMS_160c93ff_20250507 4.csv
+2025-05-07 23:08:32,972 - INFO - Output directory: output
+2025-05-07 23:08:32,972 - INFO - Input file size: 512.69 MB
+2025-05-07 23:08:32,972 - INFO - Reading CSV file using pandas with chunking...
+2025-05-07 23:08:32,979 - INFO - CSV header columns: ['account_id', 'message_id', 'account_ref', 'client_ref', 'direction', 'from', 'to', 'forced_from', 'message_body', 'concatenated', 'network', 'network_name', 'country', 'country_name', 'date_received', 'date_finalized', 'latency', 'status', 'error_code', 'error_code_description', 'currency', 'total_price', 'id', 'dcs', 'validity_period', 'ip_address', 'changed_from', 'udh', 'gateway', 'gateway_id', 'gateway_error_code', 'routing_rule_seq', 'channel', 'srr', 'hlr_lookup_cost', 'date_submitted', 'route_cost', 'protocol_id']
+2025-05-07 23:08:33,581 - INFO - Processing chunk 1 with 100000 rows...
+2025-05-07 23:08:33,592 - INFO - Adding new calculated columns...
+2025-05-07 23:08:33,593 - INFO - Row 0 - UDH: 'nan', To: '967776936912'
+2025-05-07 23:08:33,593 - INFO - Row 1 - UDH: 'nan', To: '967776936912'
+2025-05-07 23:08:33,593 - INFO - Row 2 - UDH: 'nan', To: '380958137389'
+2025-05-07 23:08:33,854 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:33,854 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:33,855 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:33,855 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:33,870 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:33,870 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:33,873 - INFO - Parsing dates to split by day...
+2025-05-07 23:08:33,900 - INFO - Tags generated: 277 filled, 99723 empty
+2025-05-07 23:08:34,708 - INFO - Chunk 1 processed in 1.13 seconds. Total rows so far: 100000
+2025-05-07 23:08:35,318 - INFO - Processing chunk 2 with 100000 rows...
+2025-05-07 23:08:35,327 - INFO - Adding new calculated columns...
+2025-05-07 23:08:35,715 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:35,715 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:35,719 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:35,719 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:35,722 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:35,722 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:35,726 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:35,726 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:35,734 - INFO - Parsing dates to split by day...
+2025-05-07 23:08:35,758 - INFO - Tags generated: 264 filled, 99736 empty
+2025-05-07 23:08:36,578 - INFO - Chunk 2 processed in 1.26 seconds. Total rows so far: 200000
+2025-05-07 23:08:37,191 - INFO - Processing chunk 3 with 100000 rows...
+2025-05-07 23:08:37,199 - INFO - Adding new calculated columns...
+2025-05-07 23:08:37,456 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:37,456 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:37,463 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:37,463 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:37,465 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:37,465 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:37,465 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:37,465 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:37,466 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:37,466 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:37,466 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:37,466 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:37,468 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:37,468 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:37,469 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:37,469 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:37,470 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:37,470 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:37,472 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:37,472 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:37,473 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:37,473 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:37,474 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:37,474 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:37,474 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:37,474 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:37,475 - INFO - Parsing dates to split by day...
+2025-05-07 23:08:37,513 - INFO - Tags generated: 714 filled, 99286 empty
+2025-05-07 23:08:38,330 - INFO - Chunk 3 processed in 1.14 seconds. Total rows so far: 300000
+2025-05-07 23:08:38,956 - INFO - Processing chunk 4 with 100000 rows...
+2025-05-07 23:08:38,964 - INFO - Adding new calculated columns...
+2025-05-07 23:08:39,217 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,217 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,218 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,218 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,222 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,222 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,223 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,223 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,223 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,223 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,223 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,223 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,224 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,224 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,224 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,224 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,224 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,224 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,225 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,225 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,225 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,225 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,225 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,225 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,225 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,225 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,226 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,226 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,227 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,227 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,227 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,227 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,229 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,229 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,232 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,232 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,234 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,234 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,235 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,235 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,235 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:39,235 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:39,236 - INFO - Parsing dates to split by day...
+2025-05-07 23:08:39,283 - INFO - Tags generated: 915 filled, 99085 empty
+2025-05-07 23:08:40,218 - INFO - Chunk 4 processed in 1.26 seconds. Total rows so far: 400000
+2025-05-07 23:08:40,835 - INFO - Processing chunk 5 with 100000 rows...
+2025-05-07 23:08:40,843 - INFO - Adding new calculated columns...
+2025-05-07 23:08:41,098 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,098 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,099 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,099 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,099 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,099 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,100 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,100 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,104 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,104 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,104 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,104 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,106 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,106 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,106 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,107 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,107 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,107 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,107 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,107 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,107 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,107 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,107 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,107 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,108 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,108 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,111 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,111 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,112 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,112 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,113 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,113 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,113 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,114 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,114 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,114 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,114 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,114 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,115 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,115 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,116 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:41,116 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:41,117 - INFO - Parsing dates to split by day...
+2025-05-07 23:08:41,164 - INFO - Tags generated: 794 filled, 99206 empty
+2025-05-07 23:08:42,170 - INFO - Chunk 5 processed in 1.34 seconds. Total rows so far: 500000
+2025-05-07 23:08:42,826 - INFO - Processing chunk 6 with 100000 rows...
+2025-05-07 23:08:42,834 - INFO - Adding new calculated columns...
+2025-05-07 23:08:43,107 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:43,107 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:43,110 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:43,110 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:43,110 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:43,110 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:43,110 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:43,111 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:43,112 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:43,112 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:43,113 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:43,113 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:43,114 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:43,114 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:43,115 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:43,116 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:43,116 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:43,116 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:43,116 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:43,116 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:43,117 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:43,117 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:43,122 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:43,122 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:43,123 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:43,123 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:43,124 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:43,124 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:43,125 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:43,125 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:43,125 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:43,125 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:43,125 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:43,125 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:43,126 - WARNING - Could not convert 'IB' to decimal: invalid literal for int() with base 16: 'IB'
+2025-05-07 23:08:43,126 - WARNING - Could not convert 'IC' to decimal: invalid literal for int() with base 16: 'IC'
+2025-05-07 23:08:43,127 - INFO - Parsing dates to split by day...
+2025-05-07 23:08:43,172 - INFO - Tags generated: 882 filled, 99118 empty
+2025-05-07 23:08:44,013 - INFO - Chunk 6 processed in 1.19 seconds. Total rows so far: 600000
+2025-05-07 23:08:44,632 - INFO - Processing chunk 7 with 100000 rows...
+2025-05-07 23:08:44,641 - INFO - Adding new calculated columns...
+2025-05-07 23:25:02,757 - INFO - CSV Processor started
+2025-05-07 23:25:02,758 - INFO - Python version: 3.13.3 (main, Apr  8 2025, 13:54:08) [Clang 16.0.0 (clang-1600.0.26.6)]
+2025-05-07 23:25:02,758 - INFO - Starting to process file: /Users/romain/Library/CloudStorage/GoogleDrive-romain.edin@vonage.com/My Drive/Accounts/Broadchain/report_SMS_160c93ff_20250507 4.csv
+2025-05-07 23:25:02,758 - INFO - Output directory: output
+2025-05-07 23:25:02,758 - INFO - Input file size: 512.69 MB
+2025-05-07 23:25:02,758 - INFO - Reading CSV file using pandas with chunking...
+2025-05-07 23:25:02,764 - INFO - CSV header columns: ['account_id', 'message_id', 'account_ref', 'client_ref', 'direction', 'from', 'to', 'forced_from', 'message_body', 'concatenated', 'network', 'network_name', 'country', 'country_name', 'date_received', 'date_finalized', 'latency', 'status', 'error_code', 'error_code_description', 'currency', 'total_price', 'id', 'dcs', 'validity_period', 'ip_address', 'changed_from', 'udh', 'gateway', 'gateway_id', 'gateway_error_code', 'routing_rule_seq', 'channel', 'srr', 'hlr_lookup_cost', 'date_submitted', 'route_cost', 'protocol_id']
+2025-05-07 23:25:03,531 - INFO - Processing chunk 1 with 100000 rows...
+2025-05-07 23:25:03,542 - INFO - Adding new calculated columns...
+2025-05-07 23:25:03,543 - INFO - Row 0 - UDH: 'nan', To: '967776936912'
+2025-05-07 23:25:03,543 - INFO - Row 1 - UDH: 'nan', To: '967776936912'
+2025-05-07 23:25:03,543 - INFO - Row 2 - UDH: 'nan', To: '380958137389'
+2025-05-07 23:25:03,803 - WARNING - Could not convert 'IC' to decimal: invalid hex
+2025-05-07 23:25:03,803 - WARNING - Could not convert 'IB' to decimal: invalid hex
+2025-05-07 23:25:03,804 - WARNING - Could not convert 'IB' to decimal: invalid hex
+2025-05-07 23:25:03,804 - WARNING - Could not convert 'IC' to decimal: invalid hex
+2025-05-07 23:25:03,819 - WARNING - Could not convert 'IC' to decimal: invalid hex
+2025-05-07 23:25:03,819 - WARNING - Could not convert 'IB' to decimal: invalid hex
+2025-05-07 23:25:03,822 - INFO - Parsing dates to split by day...
+2025-05-07 23:25:03,848 - INFO - Tags generated: 277 filled, 99723 empty
+2025-05-07 23:25:04,668 - INFO - Chunk 1 processed in 1.14 seconds. Total rows so far: 100000
+2025-05-07 23:25:05,272 - INFO - Processing chunk 2 with 100000 rows...
+2025-05-07 23:25:05,281 - INFO - Adding new calculated columns...
+2025-05-07 23:25:05,541 - WARNING - Could not convert 'IC' to decimal: invalid hex
+2025-05-07 23:25:05,542 - WARNING - Could not convert 'IB' to decimal: invalid hex
+2025-05-07 23:25:05,545 - WARNING - Could not convert 'IC' to decimal: invalid hex
+2025-05-07 23:25:05,545 - WARNING - Could not convert 'IB' to decimal: invalid hex
+2025-05-07 23:25:05,548 - WARNING - Could not convert 'IB' to decimal: invalid hex
+2025-05-07 23:25:05,548 - WARNING - Could not convert 'IC' to decimal: invalid hex
+2025-05-07 23:25:05,552 - WARNING - Could not convert 'IB' to decimal: invalid hex
+2025-05-07 23:25:05,552 - WARNING - Could not convert 'IC' to decimal: invalid hex
+2025-05-07 23:25:05,560 - INFO - Parsing dates to split by day...
+2025-05-07 23:25:05,586 - INFO - Tags generated: 264 filled, 99736 empty
+2025-05-07 23:25:06,435 - INFO - Chunk 2 processed in 1.16 seconds. Total rows so far: 200000
+2025-05-07 23:25:07,061 - INFO - Processing chunk 3 with 100000 rows...
+2025-05-07 23:25:07,069 - INFO - Adding new calculated columns...
+2025-05-07 23:25:07,324 - WARNING - Could not convert 'IB' to decimal: invalid hex
+2025-05-07 23:25:07,324 - WARNING - Could not convert 'IC' to decimal: invalid hex
+2025-05-07 23:25:07,331 - WARNING - Could not convert 'IC' to decimal: invalid hex
+2025-05-07 23:25:07,331 - WARNING - Could not convert 'IB' to decimal: invalid hex
+2025-05-07 23:25:07,333 - WARNING - Could not convert 'IB' to decimal: invalid hex
+2025-05-07 23:25:07,333 - WARNING - Could not convert 'IC' to decimal: invalid hex
+2025-05-07 23:25:07,333 - WARNING - Could not convert 'IC' to decimal: invalid hex
+2025-05-07 23:25:07,333 - WARNING - Could not convert 'IB' to decimal: invalid hex
+2025-05-07 23:25:07,334 - WARNING - Could not convert 'IC' to decimal: invalid hex
+2025-05-07 23:25:07,334 - WARNING - Could not convert 'IB' to decimal: invalid hex
+2025-05-07 23:25:07,334 - WARNING - Could not convert 'IC' to decimal: invalid hex
+2025-05-07 23:25:07,334 - WARNING - Could not convert 'IB' to decimal: invalid hex
+2025-05-07 23:25:07,336 - WARNING - Could not convert 'IB' to decimal: invalid hex
+2025-05-07 23:25:07,336 - WARNING - Could not convert 'IC' to decimal: invalid hex
+2025-05-07 23:25:07,337 - WARNING - Could not convert 'IC' to decimal: invalid hex
+2025-05-07 23:25:07,337 - WARNING - Could not convert 'IB' to decimal: invalid hex
+2025-05-07 23:25:07,338 - WARNING - Could not convert 'IC' to decimal: invalid hex
+2025-05-07 23:25:07,338 - WARNING - Could not convert 'IB' to decimal: invalid hex
+2025-05-07 23:25:07,341 - WARNING - Could not convert 'IB' to decimal: invalid hex
+2025-05-07 23:25:07,341 - WARNING - Could not convert 'IC' to decimal: invalid hex
+2025-05-07 23:25:07,341 - WARNING - Could not convert 'IC' to decimal: invalid hex
+2025-05-07 23:25:07,341 - WARNING - Could not convert 'IB' to decimal: invalid hex
+2025-05-07 23:25:07,342 - WARNING - Could not convert 'IC' to decimal: invalid hex
+2025-05-07 23:25:07,342 - WARNING - Could not convert 'IB' to decimal: invalid hex
+2025-05-07 23:25:07,343 - WARNING - Could not convert 'IC' to decimal: invalid hex
+2025-05-07 23:25:07,343 - WARNING - Could not convert 'IB' to decimal: invalid hex
+2025-05-07 23:25:07,344 - INFO - Parsing dates to split by day...
+2025-05-07 23:25:07,383 - INFO - Tags generated: 714 filled, 99286 empty
+2025-05-07 23:25:08,254 - INFO - Chunk 3 processed in 1.19 seconds. Total rows so far: 300000
+2025-05-07 23:29:41,933 - INFO - CSV Processor started
+2025-05-07 23:29:41,933 - INFO - Python version: 3.13.3 (main, Apr  8 2025, 13:54:08) [Clang 16.0.0 (clang-1600.0.26.6)]
+2025-05-07 23:29:41,933 - INFO - Starting to process file: /Users/romain/Library/CloudStorage/GoogleDrive-romain.edin@vonage.com/My Drive/Accounts/Broadchain/report_SMS_160c93ff_20250507 4.csv
+2025-05-07 23:29:41,933 - INFO - Output directory: output
+2025-05-07 23:29:41,933 - INFO - Input file size: 512.69 MB
+2025-05-07 23:29:41,933 - INFO - Reading CSV file using pandas with chunking...
+2025-05-07 23:29:41,938 - INFO - CSV header columns: ['account_id', 'message_id', 'account_ref', 'client_ref', 'direction', 'from', 'to', 'forced_from', 'message_body', 'concatenated', 'network', 'network_name', 'country', 'country_name', 'date_received', 'date_finalized', 'latency', 'status', 'error_code', 'error_code_description', 'currency', 'total_price', 'id', 'dcs', 'validity_period', 'ip_address', 'changed_from', 'udh', 'gateway', 'gateway_id', 'gateway_error_code', 'routing_rule_seq', 'channel', 'srr', 'hlr_lookup_cost', 'date_submitted', 'route_cost', 'protocol_id']
+2025-05-07 23:29:42,567 - INFO - Processing chunk 1 with 100000 rows...
+2025-05-07 23:29:42,575 - INFO - Adding new calculated columns...
+2025-05-07 23:29:42,576 - INFO - Row 0 - UDH: 'nan', To: '967776936912'
+2025-05-07 23:29:42,577 - INFO - Row 1 - UDH: 'nan', To: '967776936912'
+2025-05-07 23:29:42,577 - INFO - Row 2 - UDH: 'nan', To: '380958137389'
+2025-05-07 23:29:42,847 - INFO - Parsing dates to split by day...
+2025-05-07 23:29:42,873 - INFO - Tags generated: 277 filled, 99723 empty
+2025-05-07 23:29:43,694 - INFO - Chunk 1 processed in 1.13 seconds. Total rows so far: 100000
+2025-05-07 23:29:44,289 - INFO - Processing chunk 2 with 100000 rows...
+2025-05-07 23:29:44,301 - INFO - Adding new calculated columns...
+2025-05-07 23:29:44,568 - INFO - Parsing dates to split by day...
+2025-05-07 23:29:44,592 - INFO - Tags generated: 264 filled, 99736 empty
+2025-05-07 23:29:45,413 - INFO - Chunk 2 processed in 1.12 seconds. Total rows so far: 200000
+2025-05-07 23:29:46,023 - INFO - Processing chunk 3 with 100000 rows...
+2025-05-07 23:29:46,035 - INFO - Adding new calculated columns...
+2025-05-07 23:29:46,300 - INFO - Parsing dates to split by day...
+2025-05-07 23:29:46,338 - INFO - Tags generated: 714 filled, 99286 empty
+2025-05-07 23:29:47,199 - INFO - Chunk 3 processed in 1.18 seconds. Total rows so far: 300000
+2025-05-07 23:29:47,816 - INFO - Processing chunk 4 with 100000 rows...
+2025-05-07 23:29:47,829 - INFO - Adding new calculated columns...
+2025-05-07 23:29:48,095 - INFO - Parsing dates to split by day...
+2025-05-07 23:29:48,142 - INFO - Tags generated: 915 filled, 99085 empty
+2025-05-07 23:29:48,966 - INFO - Chunk 4 processed in 1.15 seconds. Total rows so far: 400000
+2025-05-07 23:29:49,561 - INFO - Processing chunk 5 with 100000 rows...
+2025-05-07 23:29:49,574 - INFO - Adding new calculated columns...
+2025-05-07 23:29:49,842 - INFO - Parsing dates to split by day...
+2025-05-07 23:29:49,889 - INFO - Tags generated: 794 filled, 99206 empty
+2025-05-07 23:29:50,750 - INFO - Chunk 5 processed in 1.19 seconds. Total rows so far: 500000
+2025-05-07 23:29:51,402 - INFO - Processing chunk 6 with 100000 rows...
+2025-05-07 23:29:51,416 - INFO - Adding new calculated columns...
+2025-05-07 23:29:51,688 - INFO - Parsing dates to split by day...
+2025-05-07 23:29:51,732 - INFO - Tags generated: 882 filled, 99118 empty
+2025-05-07 23:29:52,672 - INFO - Chunk 6 processed in 1.27 seconds. Total rows so far: 600000
+2025-05-07 23:29:53,591 - INFO - Processing chunk 7 with 100000 rows...
+2025-05-07 23:29:53,631 - INFO - Adding new calculated columns...
+2025-05-07 23:29:53,920 - INFO - Parsing dates to split by day...
+2025-05-07 23:29:53,967 - INFO - Tags generated: 1142 filled, 98858 empty
+2025-05-07 23:29:54,825 - INFO - Chunk 7 processed in 1.23 seconds. Total rows so far: 700000
+2025-05-07 23:29:55,473 - INFO - Processing chunk 8 with 100000 rows...
+2025-05-07 23:29:55,487 - INFO - Adding new calculated columns...
+2025-05-07 23:29:55,759 - INFO - Parsing dates to split by day...
+2025-05-07 23:29:55,809 - INFO - Tags generated: 1017 filled, 98983 empty
+2025-05-07 23:29:56,642 - INFO - Chunk 8 processed in 1.17 seconds. Total rows so far: 800000
+2025-05-07 23:29:57,289 - INFO - Processing chunk 9 with 100000 rows...
+2025-05-07 23:29:57,304 - INFO - Adding new calculated columns...
+2025-05-07 23:29:57,580 - INFO - Parsing dates to split by day...
+2025-05-07 23:29:57,628 - INFO - Tags generated: 1345 filled, 98655 empty
+2025-05-07 23:29:58,547 - INFO - Chunk 9 processed in 1.26 seconds. Total rows so far: 900000
+2025-05-07 23:29:58,742 - INFO - Processing chunk 10 with 34567 rows...
+2025-05-07 23:29:58,751 - INFO - Adding new calculated columns...
+2025-05-07 23:29:58,845 - INFO - Parsing dates to split by day...
+2025-05-07 23:29:58,861 - INFO - Tags generated: 481 filled, 34086 empty
+2025-05-07 23:29:59,175 - INFO - Chunk 10 processed in 0.43 seconds. Total rows so far: 934567
+2025-05-07 23:29:59,175 - INFO - ==================================================
+2025-05-07 23:29:59,175 - INFO - Processing Summary:
+2025-05-07 23:29:59,176 - INFO - Total rows processed: 934567
+2025-05-07 23:29:59,176 - INFO - Number of output files created: 7
+2025-05-07 23:29:59,176 - INFO - Processing time: 17.24 seconds
+2025-05-07 23:29:59,176 - INFO - Files created:
+2025-05-07 23:29:59,176 - INFO -   - processed_2025-04-22.csv: 38674 rows, 11.95 MB
+2025-05-07 23:29:59,176 - INFO -   - processed_2025-04-23.csv: 130246 rows, 40.24 MB
+2025-05-07 23:29:59,176 - INFO -   - processed_2025-04-24.csv: 123045 rows, 40.67 MB
+2025-05-07 23:29:59,176 - INFO -   - processed_2025-04-25.csv: 126177 rows, 91.05 MB
+2025-05-07 23:29:59,176 - INFO -   - processed_2025-04-26.csv: 115511 rows, 107.59 MB
+2025-05-07 23:29:59,176 - INFO -   - processed_2025-04-27.csv: 111159 rows, 106.73 MB
+2025-05-07 23:29:59,176 - INFO -   - processed_2025-04-28.csv: 289755 rows, 355.52 MB
+2025-05-07 23:29:59,176 - INFO - Total output size: 753.75 MB
+2025-05-07 23:29:59,176 - INFO - ==================================================
+2025-05-07 23:29:59,183 - INFO - CSV processing completed successfully!
+2025-05-07 23:43:11,367 - INFO - CSV Processor started
+2025-05-07 23:43:11,367 - INFO - Python version: 3.13.3 (main, Apr  8 2025, 13:54:08) [Clang 16.0.0 (clang-1600.0.26.6)]
+2025-05-07 23:43:11,368 - INFO - Starting to process file: /Users/romain/Library/CloudStorage/GoogleDrive-romain.edin@vonage.com/My Drive/Accounts/Broadchain/report_SMS_160c93ff_20250507 4.csv
+2025-05-07 23:43:11,368 - INFO - Output directory: output
+2025-05-07 23:43:11,368 - INFO - Input file size: 512.69 MB
+2025-05-07 23:43:11,368 - INFO - Reading CSV file using pandas with chunking...
+2025-05-07 23:43:11,373 - INFO - CSV header columns: ['account_id', 'message_id', 'account_ref', 'client_ref', 'direction', 'from', 'to', 'forced_from', 'message_body', 'concatenated', 'network', 'network_name', 'country', 'country_name', 'date_received', 'date_finalized', 'latency', 'status', 'error_code', 'error_code_description', 'currency', 'total_price', 'id', 'dcs', 'validity_period', 'ip_address', 'changed_from', 'udh', 'gateway', 'gateway_id', 'gateway_error_code', 'routing_rule_seq', 'channel', 'srr', 'hlr_lookup_cost', 'date_submitted', 'route_cost', 'protocol_id']
+2025-05-07 23:43:12,029 - INFO - Processing chunk 1 with 100000 rows...
+2025-05-07 23:43:12,038 - INFO - Adding new calculated columns...
+2025-05-07 23:43:12,039 - INFO - Row 0 - UDH: 'nan', To: '967776936912'
+2025-05-07 23:43:12,039 - INFO - Row 1 - UDH: 'nan', To: '967776936912'
+2025-05-07 23:43:12,039 - INFO - Row 2 - UDH: 'nan', To: '380958137389'
+2025-05-07 23:43:12,395 - INFO - Parsing dates to split by day...
+2025-05-07 23:43:12,425 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-07 23:43:13,331 - INFO - Chunk 1 processed in 1.30 seconds. Total rows so far: 100000
+2025-05-07 23:43:13,937 - INFO - Processing chunk 2 with 100000 rows...
+2025-05-07 23:43:13,949 - INFO - Adding new calculated columns...
+2025-05-07 23:43:14,300 - INFO - Parsing dates to split by day...
+2025-05-07 23:43:14,324 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-07 23:43:15,222 - INFO - Chunk 2 processed in 1.29 seconds. Total rows so far: 200000
+2025-05-07 23:43:15,849 - INFO - Processing chunk 3 with 100000 rows...
+2025-05-07 23:43:15,863 - INFO - Adding new calculated columns...
+2025-05-07 23:43:16,209 - INFO - Parsing dates to split by day...
+2025-05-07 23:43:16,247 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-07 23:43:17,123 - INFO - Chunk 3 processed in 1.27 seconds. Total rows so far: 300000
+2025-05-07 23:43:18,303 - INFO - Processing chunk 4 with 100000 rows...
+2025-05-07 23:43:18,318 - INFO - Adding new calculated columns...
+2025-05-07 23:43:18,679 - INFO - Parsing dates to split by day...
+2025-05-07 23:43:18,734 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-07 23:43:20,733 - INFO - Chunk 4 processed in 2.43 seconds. Total rows so far: 400000
+2025-05-07 23:43:22,060 - INFO - Processing chunk 5 with 100000 rows...
+2025-05-07 23:43:22,082 - INFO - Adding new calculated columns...
+2025-05-07 23:43:22,748 - INFO - Parsing dates to split by day...
+2025-05-07 23:43:22,840 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-07 23:43:24,004 - INFO - Chunk 5 processed in 1.94 seconds. Total rows so far: 500000
+2025-05-07 23:43:24,926 - INFO - Processing chunk 6 with 100000 rows...
+2025-05-07 23:43:24,944 - INFO - Adding new calculated columns...
+2025-05-07 23:43:25,494 - INFO - Parsing dates to split by day...
+2025-05-07 23:43:25,546 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-07 23:43:26,591 - INFO - Chunk 6 processed in 1.66 seconds. Total rows so far: 600000
+2025-05-07 23:43:27,721 - INFO - Processing chunk 7 with 100000 rows...
+2025-05-07 23:43:27,781 - INFO - Adding new calculated columns...
+2025-05-07 23:43:28,272 - INFO - Parsing dates to split by day...
+2025-05-07 23:43:28,325 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-07 23:43:29,246 - INFO - Chunk 7 processed in 1.53 seconds. Total rows so far: 700000
+2025-05-07 23:43:29,917 - INFO - Processing chunk 8 with 100000 rows...
+2025-05-07 23:43:29,930 - INFO - Adding new calculated columns...
+2025-05-07 23:43:30,299 - INFO - Parsing dates to split by day...
+2025-05-07 23:43:30,350 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-07 23:43:31,254 - INFO - Chunk 8 processed in 1.34 seconds. Total rows so far: 800000
+2025-05-07 23:43:31,904 - INFO - Processing chunk 9 with 100000 rows...
+2025-05-07 23:43:31,919 - INFO - Adding new calculated columns...
+2025-05-07 23:43:32,287 - INFO - Parsing dates to split by day...
+2025-05-07 23:43:32,337 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-07 23:43:33,225 - INFO - Chunk 9 processed in 1.32 seconds. Total rows so far: 900000
+2025-05-07 23:43:33,456 - INFO - Processing chunk 10 with 34567 rows...
+2025-05-07 23:43:33,465 - INFO - Adding new calculated columns...
+2025-05-07 23:43:33,594 - INFO - Parsing dates to split by day...
+2025-05-07 23:43:33,611 - INFO - Tags generated: 34567 filled, 0 empty
+2025-05-07 23:43:33,920 - INFO - Chunk 10 processed in 0.46 seconds. Total rows so far: 934567
+2025-05-07 23:43:33,920 - INFO - ==================================================
+2025-05-07 23:43:33,920 - INFO - Processing Summary:
+2025-05-07 23:43:33,920 - INFO - Total rows processed: 934567
+2025-05-07 23:43:33,920 - INFO - Number of output files created: 7
+2025-05-07 23:43:33,920 - INFO - Processing time: 22.55 seconds
+2025-05-07 23:43:33,920 - INFO - Files created:
+2025-05-07 23:43:33,920 - INFO -   - processed_2025-04-22.csv: 38674 rows, 24.36 MB
+2025-05-07 23:43:33,920 - INFO -   - processed_2025-04-23.csv: 130246 rows, 82.05 MB
+2025-05-07 23:43:33,920 - INFO -   - processed_2025-04-24.csv: 123045 rows, 80.24 MB
+2025-05-07 23:43:33,921 - INFO -   - processed_2025-04-25.csv: 126177 rows, 131.73 MB
+2025-05-07 23:43:33,921 - INFO -   - processed_2025-04-26.csv: 115511 rows, 144.86 MB
+2025-05-07 23:43:33,921 - INFO -   - processed_2025-04-27.csv: 111159 rows, 142.60 MB
+2025-05-07 23:43:33,921 - INFO -   - processed_2025-04-28.csv: 289755 rows, 447.94 MB
+2025-05-07 23:43:33,921 - INFO - Total output size: 1053.79 MB
+2025-05-07 23:43:33,921 - INFO - ==================================================
+2025-05-07 23:43:33,928 - INFO - CSV processing completed successfully!
+2025-05-07 23:45:24,425 - INFO - CSV Processor started
+2025-05-07 23:45:24,425 - INFO - Python version: 3.13.3 (main, Apr  8 2025, 13:54:08) [Clang 16.0.0 (clang-1600.0.26.6)]
+2025-05-07 23:45:24,425 - INFO - Starting to process file: /Users/romain/Library/CloudStorage/GoogleDrive-romain.edin@vonage.com/My Drive/Accounts/Broadchain/report_SMS_160c93ff_20250507 4.csv
+2025-05-07 23:45:24,425 - INFO - Output directory: output
+2025-05-07 23:45:24,426 - INFO - Input file size: 512.69 MB
+2025-05-07 23:45:24,426 - INFO - Reading CSV file using pandas with chunking...
+2025-05-07 23:45:24,430 - INFO - CSV header columns: ['account_id', 'message_id', 'account_ref', 'client_ref', 'direction', 'from', 'to', 'forced_from', 'message_body', 'concatenated', 'network', 'network_name', 'country', 'country_name', 'date_received', 'date_finalized', 'latency', 'status', 'error_code', 'error_code_description', 'currency', 'total_price', 'id', 'dcs', 'validity_period', 'ip_address', 'changed_from', 'udh', 'gateway', 'gateway_id', 'gateway_error_code', 'routing_rule_seq', 'channel', 'srr', 'hlr_lookup_cost', 'date_submitted', 'route_cost', 'protocol_id']
+2025-05-07 23:45:25,014 - INFO - Processing chunk 1 with 100000 rows...
+2025-05-07 23:45:25,023 - INFO - Adding new calculated columns...
+2025-05-07 23:45:25,024 - INFO - Row 0 - UDH: 'nan', To: '967776936912'
+2025-05-07 23:45:25,024 - INFO - Row 1 - UDH: 'nan', To: '967776936912'
+2025-05-07 23:45:25,024 - INFO - Row 2 - UDH: 'nan', To: '380958137389'
+2025-05-07 23:45:25,376 - INFO - Parsing dates to split by day...
+2025-05-07 23:45:25,403 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-07 23:45:26,255 - INFO - Chunk 1 processed in 1.24 seconds. Total rows so far: 100000
+2025-05-07 23:45:26,882 - INFO - Processing chunk 2 with 100000 rows...
+2025-05-07 23:45:26,895 - INFO - Adding new calculated columns...
+2025-05-07 23:45:27,257 - INFO - Parsing dates to split by day...
+2025-05-07 23:45:27,325 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-07 23:45:28,166 - INFO - Chunk 2 processed in 1.28 seconds. Total rows so far: 200000
+2025-05-07 23:45:29,016 - INFO - Processing chunk 3 with 100000 rows...
+2025-05-07 23:45:29,031 - INFO - Adding new calculated columns...
+2025-05-07 23:45:29,454 - INFO - Parsing dates to split by day...
+2025-05-07 23:45:29,528 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-07 23:45:30,402 - INFO - Chunk 3 processed in 1.39 seconds. Total rows so far: 300000
+2025-05-07 23:45:31,036 - INFO - Processing chunk 4 with 100000 rows...
+2025-05-07 23:45:31,048 - INFO - Adding new calculated columns...
+2025-05-07 23:45:31,412 - INFO - Parsing dates to split by day...
+2025-05-07 23:45:31,462 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-07 23:45:32,327 - INFO - Chunk 4 processed in 1.29 seconds. Total rows so far: 400000
+2025-05-07 23:45:32,956 - INFO - Processing chunk 5 with 100000 rows...
+2025-05-07 23:45:32,969 - INFO - Adding new calculated columns...
+2025-05-07 23:45:33,330 - INFO - Parsing dates to split by day...
+2025-05-07 23:45:33,378 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-07 23:45:34,492 - INFO - Chunk 5 processed in 1.54 seconds. Total rows so far: 500000
+2025-05-07 23:45:35,113 - INFO - Processing chunk 6 with 100000 rows...
+2025-05-07 23:45:35,127 - INFO - Adding new calculated columns...
+2025-05-07 23:45:35,641 - INFO - Parsing dates to split by day...
+2025-05-07 23:45:35,690 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-07 23:45:36,557 - INFO - Chunk 6 processed in 1.44 seconds. Total rows so far: 600000
+2025-05-07 23:45:37,168 - INFO - Processing chunk 7 with 100000 rows...
+2025-05-07 23:45:37,185 - INFO - Adding new calculated columns...
+2025-05-07 23:45:37,536 - INFO - Parsing dates to split by day...
+2025-05-07 23:45:37,582 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-07 23:45:38,437 - INFO - Chunk 7 processed in 1.27 seconds. Total rows so far: 700000
+2025-05-07 23:45:39,046 - INFO - Processing chunk 8 with 100000 rows...
+2025-05-07 23:45:39,060 - INFO - Adding new calculated columns...
+2025-05-07 23:45:39,526 - INFO - Parsing dates to split by day...
+2025-05-07 23:45:39,612 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-07 23:45:40,767 - INFO - Chunk 8 processed in 1.72 seconds. Total rows so far: 800000
+2025-05-07 23:45:41,662 - INFO - Processing chunk 9 with 100000 rows...
+2025-05-07 23:45:41,676 - INFO - Adding new calculated columns...
+2025-05-07 23:45:42,053 - INFO - Parsing dates to split by day...
+2025-05-07 23:45:42,103 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-07 23:45:43,081 - INFO - Chunk 9 processed in 1.42 seconds. Total rows so far: 900000
+2025-05-07 23:45:43,293 - INFO - Processing chunk 10 with 34567 rows...
+2025-05-07 23:45:43,303 - INFO - Adding new calculated columns...
+2025-05-07 23:45:43,432 - INFO - Parsing dates to split by day...
+2025-05-07 23:45:43,448 - INFO - Tags generated: 34567 filled, 0 empty
+2025-05-07 23:45:43,760 - INFO - Chunk 10 processed in 0.47 seconds. Total rows so far: 934567
+2025-05-07 23:45:43,760 - INFO - ==================================================
+2025-05-07 23:45:43,760 - INFO - Processing Summary:
+2025-05-07 23:45:43,760 - INFO - Total rows processed: 934567
+2025-05-07 23:45:43,760 - INFO - Number of output files created: 7
+2025-05-07 23:45:43,760 - INFO - Processing time: 19.34 seconds
+2025-05-07 23:45:43,760 - INFO - Files created:
+2025-05-07 23:45:43,761 - INFO -   - processed_2025-04-22.csv: 38674 rows, 12.41 MB
+2025-05-07 23:45:43,761 - INFO -   - processed_2025-04-23.csv: 130246 rows, 41.81 MB
+2025-05-07 23:45:43,761 - INFO -   - processed_2025-04-24.csv: 123045 rows, 39.58 MB
+2025-05-07 23:45:43,761 - INFO -   - processed_2025-04-25.csv: 126177 rows, 40.68 MB
+2025-05-07 23:45:43,761 - INFO -   - processed_2025-04-26.csv: 115511 rows, 37.27 MB
+2025-05-07 23:45:43,761 - INFO -   - processed_2025-04-27.csv: 111159 rows, 35.87 MB
+2025-05-07 23:45:43,761 - INFO -   - processed_2025-04-28.csv: 289755 rows, 92.42 MB
+2025-05-07 23:45:43,761 - INFO - Total output size: 300.04 MB
+2025-05-07 23:45:43,761 - INFO - ==================================================
+2025-05-07 23:45:43,768 - INFO - CSV processing completed successfully!
+2025-05-08 00:03:06,507 - INFO - CSV Processor started
+2025-05-08 00:03:06,507 - INFO - Python version: 3.13.3 (main, Apr  8 2025, 13:54:08) [Clang 16.0.0 (clang-1600.0.26.6)]
+2025-05-08 00:03:06,507 - INFO - Starting to process file: /Users/romain/Library/CloudStorage/GoogleDrive-romain.edin@vonage.com/My Drive/Accounts/Broadchain/report_SMS_160c93ff_20250507 4.csv
+2025-05-08 00:03:06,507 - INFO - Output directory: output
+2025-05-08 00:03:06,507 - INFO - API Key: 160c93ff
+2025-05-08 00:03:06,508 - INFO - Input file size: 512.69 MB
+2025-05-08 00:03:06,508 - INFO - Reading CSV file using pandas with chunking...
+2025-05-08 00:03:06,515 - INFO - CSV header columns: ['account_id', 'message_id', 'account_ref', 'client_ref', 'direction', 'from', 'to', 'forced_from', 'message_body', 'concatenated', 'network', 'network_name', 'country', 'country_name', 'date_received', 'date_finalized', 'latency', 'status', 'error_code', 'error_code_description', 'currency', 'total_price', 'id', 'dcs', 'validity_period', 'ip_address', 'changed_from', 'udh', 'gateway', 'gateway_id', 'gateway_error_code', 'routing_rule_seq', 'channel', 'srr', 'hlr_lookup_cost', 'date_submitted', 'route_cost', 'protocol_id']
+2025-05-08 00:03:07,121 - INFO - Processing chunk 1 with 100000 rows...
+2025-05-08 00:03:07,129 - INFO - Adding new calculated columns...
+2025-05-08 00:03:07,130 - INFO - Row 0 - UDH: 'nan', To: '967776936912'
+2025-05-08 00:03:07,130 - INFO - Row 1 - UDH: 'nan', To: '967776936912'
+2025-05-08 00:03:07,130 - INFO - Row 2 - UDH: 'nan', To: '380958137389'
+2025-05-08 00:03:07,503 - INFO - Parsing dates to split by day...
+2025-05-08 00:03:07,530 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-08 00:03:08,382 - INFO - Chunk 1 processed in 1.26 seconds. Total rows so far: 100000
+2025-05-08 00:03:09,164 - INFO - Processing chunk 2 with 100000 rows...
+2025-05-08 00:03:09,183 - INFO - Adding new calculated columns...
+2025-05-08 00:03:09,855 - INFO - Parsing dates to split by day...
+2025-05-08 00:03:09,879 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-08 00:03:10,753 - INFO - Chunk 2 processed in 1.59 seconds. Total rows so far: 200000
+2025-05-08 00:03:11,405 - INFO - Processing chunk 3 with 100000 rows...
+2025-05-08 00:03:11,418 - INFO - Adding new calculated columns...
+2025-05-08 00:03:11,801 - INFO - Parsing dates to split by day...
+2025-05-08 00:03:11,846 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-08 00:03:12,754 - INFO - Chunk 3 processed in 1.35 seconds. Total rows so far: 300000
+2025-05-08 00:03:13,367 - INFO - Processing chunk 4 with 100000 rows...
+2025-05-08 00:03:13,382 - INFO - Adding new calculated columns...
+2025-05-08 00:03:13,872 - INFO - Parsing dates to split by day...
+2025-05-08 00:03:13,923 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-08 00:03:15,011 - INFO - Chunk 4 processed in 1.64 seconds. Total rows so far: 400000
+2025-05-08 00:03:15,646 - INFO - Processing chunk 5 with 100000 rows...
+2025-05-08 00:03:15,659 - INFO - Adding new calculated columns...
+2025-05-08 00:03:16,011 - INFO - Parsing dates to split by day...
+2025-05-08 00:03:16,057 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-08 00:03:17,064 - INFO - Chunk 5 processed in 1.42 seconds. Total rows so far: 500000
+2025-05-08 00:03:17,733 - INFO - Processing chunk 6 with 100000 rows...
+2025-05-08 00:03:17,748 - INFO - Adding new calculated columns...
+2025-05-08 00:03:18,093 - INFO - Parsing dates to split by day...
+2025-05-08 00:03:18,142 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-08 00:03:19,011 - INFO - Chunk 6 processed in 1.28 seconds. Total rows so far: 600000
+2025-05-08 00:03:19,639 - INFO - Processing chunk 7 with 100000 rows...
+2025-05-08 00:03:19,655 - INFO - Adding new calculated columns...
+2025-05-08 00:03:20,001 - INFO - Parsing dates to split by day...
+2025-05-08 00:03:20,047 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-08 00:03:20,906 - INFO - Chunk 7 processed in 1.27 seconds. Total rows so far: 700000
+2025-05-08 00:03:21,523 - INFO - Processing chunk 8 with 100000 rows...
+2025-05-08 00:03:21,538 - INFO - Adding new calculated columns...
+2025-05-08 00:03:21,882 - INFO - Parsing dates to split by day...
+2025-05-08 00:03:21,928 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-08 00:03:22,778 - INFO - Chunk 8 processed in 1.25 seconds. Total rows so far: 800000
+2025-05-08 00:03:23,402 - INFO - Processing chunk 9 with 100000 rows...
+2025-05-08 00:03:23,418 - INFO - Adding new calculated columns...
+2025-05-08 00:03:23,766 - INFO - Parsing dates to split by day...
+2025-05-08 00:03:23,810 - INFO - Tags generated: 100000 filled, 0 empty
+2025-05-08 00:03:24,655 - INFO - Chunk 9 processed in 1.25 seconds. Total rows so far: 900000
+2025-05-08 00:03:24,844 - INFO - Processing chunk 10 with 34567 rows...
+2025-05-08 00:03:24,854 - INFO - Adding new calculated columns...
+2025-05-08 00:03:24,976 - INFO - Parsing dates to split by day...
+2025-05-08 00:03:24,992 - INFO - Tags generated: 34567 filled, 0 empty
+2025-05-08 00:03:25,286 - INFO - Chunk 10 processed in 0.44 seconds. Total rows so far: 934567
+2025-05-08 00:03:25,287 - INFO - ==================================================
+2025-05-08 00:03:25,287 - INFO - Processing Summary:
+2025-05-08 00:03:25,287 - INFO - Total rows processed: 934567
+2025-05-08 00:03:25,287 - INFO - Number of output files created: 7
+2025-05-08 00:03:25,287 - INFO - Processing time: 18.78 seconds
+2025-05-08 00:03:25,287 - INFO - Files created:
+2025-05-08 00:03:25,287 - INFO -   - 160c93ff-2025-04-22.csv: 38674 rows, 12.41 MB
+2025-05-08 00:03:25,287 - INFO -   - 160c93ff-2025-04-23.csv: 130246 rows, 41.81 MB
+2025-05-08 00:03:25,287 - INFO -   - 160c93ff-2025-04-24.csv: 123045 rows, 39.58 MB
+2025-05-08 00:03:25,287 - INFO -   - 160c93ff-2025-04-25.csv: 126177 rows, 40.68 MB
+2025-05-08 00:03:25,287 - INFO -   - 160c93ff-2025-04-26.csv: 115511 rows, 37.27 MB
+2025-05-08 00:03:25,287 - INFO -   - 160c93ff-2025-04-27.csv: 111159 rows, 35.87 MB
+2025-05-08 00:03:25,287 - INFO -   - 160c93ff-2025-04-28.csv: 289755 rows, 92.42 MB
+2025-05-08 00:03:25,287 - INFO - Total output size: 300.04 MB
+2025-05-08 00:03:25,287 - INFO - ==================================================
+2025-05-08 00:03:25,294 - INFO - CSV processing completed successfully!
+2025-05-08 00:12:47,058 - INFO - CSV Processor started
+2025-05-08 00:12:47,058 - INFO - Python version: 3.13.3 (main, Apr  8 2025, 13:54:08) [Clang 16.0.0 (clang-1600.0.26.6)]
+2025-05-08 00:12:47,058 - INFO - Starting to process file: /Users/romain/Library/CloudStorage/GoogleDrive-romain.edin@vonage.com/My Drive/Accounts/Broadchain/report_SMS_7c8bd993_20250507.csv
+2025-05-08 00:12:47,058 - INFO - Output directory: output
+2025-05-08 00:12:47,058 - INFO - Input file size: 450.63 MB
+2025-05-08 00:12:47,058 - INFO - Reading CSV file using pandas with chunking...
+2025-05-08 00:12:47,064 - INFO - CSV header columns: ['account_id', 'message_id', 'account_ref', 'client_ref', 'direction', 'from', 'to', 'forced_from', 'message_body', 'concatenated', 'network', 'network_name', 'country', 'country_name', 'date_received', 'date_finalized', 'latency', 'status', 'error_code', 'error_code_description', 'currency', 'total_price', 'id', 'dcs', 'validity_period', 'ip_address', 'changed_from', 'udh', 'gateway', 'gateway_id', 'gateway_error_code', 'routing_rule_seq', 'channel', 'srr', 'hlr_lookup_cost', 'date_submitted', 'route_cost', 'protocol_id']
+2025-05-08 00:12:47,724 - INFO - Processing chunk 1 with 100000 rows...
+2025-05-08 00:12:47,733 - INFO - Adding new calculated columns...
+2025-05-08 00:12:47,734 - INFO - Row 0 - UDH: 'nan', To: '919134932907'
+2025-05-08 00:12:47,734 - INFO - Row 1 - UDH: 'nan', To: '2348035306650'
+2025-05-08 00:12:47,734 - INFO - Row 2 - UDH: 'nan', To: '491787475914'
+2025-05-08 00:12:48,006 - INFO - Parsing dates to split by day...
+2025-05-08 00:12:48,058 - INFO - Tags generated: 22 filled, 99978 empty
+2025-05-08 00:12:48,874 - INFO - Chunk 1 processed in 1.15 seconds. Total rows so far: 100000
+2025-05-08 00:12:49,578 - INFO - Processing chunk 2 with 100000 rows...
+2025-05-08 00:12:49,592 - INFO - Adding new calculated columns...
+2025-05-08 00:12:49,864 - INFO - Parsing dates to split by day...
+2025-05-08 00:12:49,911 - INFO - Tags generated: 38 filled, 99962 empty
+2025-05-08 00:12:50,756 - INFO - Chunk 2 processed in 1.18 seconds. Total rows so far: 200000
+2025-05-08 00:12:51,574 - INFO - Processing chunk 3 with 100000 rows...
+2025-05-08 00:12:51,589 - INFO - Adding new calculated columns...
+2025-05-08 00:12:51,950 - INFO - Parsing dates to split by day...
+2025-05-08 00:12:51,999 - INFO - Tags generated: 14 filled, 99986 empty
+2025-05-08 00:12:52,821 - INFO - Chunk 3 processed in 1.25 seconds. Total rows so far: 300000
+2025-05-08 00:12:53,477 - INFO - Processing chunk 4 with 100000 rows...
+2025-05-08 00:12:53,491 - INFO - Adding new calculated columns...
+2025-05-08 00:12:53,767 - INFO - Parsing dates to split by day...
+2025-05-08 00:12:53,817 - INFO - Tags generated: 18 filled, 99982 empty
+2025-05-08 00:12:54,622 - INFO - Chunk 4 processed in 1.15 seconds. Total rows so far: 400000
+2025-05-08 00:12:55,317 - INFO - Processing chunk 5 with 100000 rows...
+2025-05-08 00:12:55,331 - INFO - Adding new calculated columns...
+2025-05-08 00:12:55,617 - INFO - Parsing dates to split by day...
+2025-05-08 00:12:55,808 - INFO - Tags generated: 64 filled, 99936 empty
+2025-05-08 00:12:57,200 - INFO - Chunk 5 processed in 1.88 seconds. Total rows so far: 500000
+2025-05-08 00:12:58,663 - INFO - Processing chunk 6 with 100000 rows...
+2025-05-08 00:12:58,681 - INFO - Adding new calculated columns...
+2025-05-08 00:12:59,001 - INFO - Parsing dates to split by day...
+2025-05-08 00:12:59,053 - INFO - Tags generated: 18 filled, 99982 empty
+2025-05-08 00:13:00,002 - INFO - Chunk 6 processed in 1.34 seconds. Total rows so far: 600000
+2025-05-08 00:13:00,806 - INFO - Processing chunk 7 with 100000 rows...
+2025-05-08 00:13:00,821 - INFO - Adding new calculated columns...
+2025-05-08 00:13:01,119 - INFO - Parsing dates to split by day...
+2025-05-08 00:13:01,176 - INFO - Tags generated: 24 filled, 99976 empty
+2025-05-08 00:13:02,308 - INFO - Chunk 7 processed in 1.50 seconds. Total rows so far: 700000
+2025-05-08 00:13:03,133 - INFO - Processing chunk 8 with 100000 rows...
+2025-05-08 00:13:03,149 - INFO - Adding new calculated columns...
+2025-05-08 00:13:03,473 - INFO - Parsing dates to split by day...
+2025-05-08 00:13:03,530 - INFO - Tags generated: 14 filled, 99986 empty
+2025-05-08 00:13:04,435 - INFO - Chunk 8 processed in 1.30 seconds. Total rows so far: 800000
+2025-05-08 00:13:04,951 - INFO - Processing chunk 9 with 69643 rows...
+2025-05-08 00:13:04,965 - INFO - Adding new calculated columns...
+2025-05-08 00:13:05,167 - INFO - Parsing dates to split by day...
+2025-05-08 00:13:05,206 - INFO - Tags generated: 8 filled, 69635 empty
+2025-05-08 00:13:05,847 - INFO - Chunk 9 processed in 0.90 seconds. Total rows so far: 869643
+2025-05-08 00:13:05,847 - INFO - ==================================================
+2025-05-08 00:13:05,848 - INFO - Processing Summary:
+2025-05-08 00:13:05,848 - INFO - Total rows processed: 869643
+2025-05-08 00:13:05,848 - INFO - Number of output files created: 7
+2025-05-08 00:13:05,848 - INFO - Processing time: 18.79 seconds
+2025-05-08 00:13:05,848 - INFO - Files created:
+2025-05-08 00:13:05,848 - INFO -   - processed_2025-04-22.csv: 49855 rows, 26.76 MB
+2025-05-08 00:13:05,848 - INFO -   - processed_2025-04-23.csv: 156084 rows, 86.82 MB
+2025-05-08 00:13:05,848 - INFO -   - processed_2025-04-24.csv: 143112 rows, 80.84 MB
+2025-05-08 00:13:05,848 - INFO -   - processed_2025-04-25.csv: 156271 rows, 85.95 MB
+2025-05-08 00:13:05,848 - INFO -   - processed_2025-04-26.csv: 143445 rows, 78.85 MB
+2025-05-08 00:13:05,848 - INFO -   - processed_2025-04-27.csv: 129484 rows, 73.31 MB
+2025-05-08 00:13:05,848 - INFO -   - processed_2025-04-28.csv: 91392 rows, 118.82 MB
+2025-05-08 00:13:05,848 - INFO - Total output size: 551.34 MB
+2025-05-08 00:13:05,848 - INFO - ==================================================
+2025-05-08 00:13:05,861 - INFO - CSV processing completed successfully!
+2025-05-08 00:22:57,874 - [32mINFO[0m - 
+[32mCSV Processor started[0m
+2025-05-08 00:22:57,875 - [32mINFO[0m - [34mPython version: 3.13.3 (main, Apr  8 2025, 13:54:08) [Clang 16.0.0 (clang-1600.0.26.6)][0m
+
+2025-05-08 00:22:57,875 - [32mINFO[0m - 
+[34mStarting to process file: [33m/Users/romain/Library/CloudStorage/GoogleDrive-romain.edin@vonage.com/My Drive/Accounts/Broadchain/report_SMS_7c8bd993_20250507.csv[0m
+2025-05-08 00:22:57,875 - [32mINFO[0m - [34mOutput directory: [33moutput[0m
+2025-05-08 00:22:57,875 - [32mINFO[0m - [34mAPI Key: [33m7c8bd993[0m
+
+2025-05-08 00:22:57,875 - [32mINFO[0m - Input file size: 450.63 MB
+2025-05-08 00:22:57,875 - [32mINFO[0m - Reading CSV file using pandas with chunking...
+2025-05-08 00:22:57,881 - [32mINFO[0m - CSV header columns: ['account_id', 'message_id', 'account_ref', 'client_ref', 'direction', 'from', 'to', 'forced_from', 'message_body', 'concatenated', 'network', 'network_name', 'country', 'country_name', 'date_received', 'date_finalized', 'latency', 'status', 'error_code', 'error_code_description', 'currency', 'total_price', 'id', 'dcs', 'validity_period', 'ip_address', 'changed_from', 'udh', 'gateway', 'gateway_id', 'gateway_error_code', 'routing_rule_seq', 'channel', 'srr', 'hlr_lookup_cost', 'date_submitted', 'route_cost', 'protocol_id']
+2025-05-08 00:22:58,548 - [32mINFO[0m - 
+[34mProcessing chunk 1 with [33m100,000[34m rows...[0m
+2025-05-08 00:22:58,557 - [32mINFO[0m - Adding new calculated columns...
+2025-05-08 00:22:58,557 - [32mINFO[0m - Row 0 - UDH: 'nan', To: '919134932907'
+2025-05-08 00:22:58,557 - [32mINFO[0m - Row 1 - UDH: 'nan', To: '2348035306650'
+2025-05-08 00:22:58,557 - [32mINFO[0m - Row 2 - UDH: 'nan', To: '491787475914'
+2025-05-08 00:22:58,914 - [32mINFO[0m - Parsing dates to split by day...
+2025-05-08 00:22:58,969 - [32mINFO[0m - [34mTags generated: [32m100,000 filled, [33m0 empty[0m
+2025-05-08 00:22:58,975 - [32mINFO[0m - [34mWriting data to 2 date-specific files...[0m
+2025-05-08 00:22:59,868 - [32mINFO[0m - Chunk 1 processed in 1.32 seconds. Total rows so far: 100000
+2025-05-08 00:23:00,505 - [32mINFO[0m - 
+[34mProcessing chunk 2 with [33m100,000[34m rows...[0m
+2025-05-08 00:23:00,515 - [32mINFO[0m - Adding new calculated columns...
+2025-05-08 00:23:00,870 - [32mINFO[0m - Parsing dates to split by day...
+2025-05-08 00:23:00,919 - [32mINFO[0m - [34mTags generated: [32m100,000 filled, [33m0 empty[0m
+2025-05-08 00:23:00,929 - [32mINFO[0m - [34mWriting data to 1 date-specific files...[0m
+2025-05-08 00:23:01,864 - [32mINFO[0m - Chunk 2 processed in 1.36 seconds. Total rows so far: 200000
+2025-05-08 00:23:02,506 - [32mINFO[0m - 
+[34mProcessing chunk 3 with [33m100,000[34m rows...[0m
+2025-05-08 00:23:02,514 - [32mINFO[0m - Adding new calculated columns...
+2025-05-08 00:23:02,877 - [32mINFO[0m - Parsing dates to split by day...
+2025-05-08 00:23:02,926 - [32mINFO[0m - [34mTags generated: [32m100,000 filled, [33m0 empty[0m
+2025-05-08 00:23:02,937 - [32mINFO[0m - [34mWriting data to 2 date-specific files...[0m
+2025-05-08 00:23:03,799 - [32mINFO[0m - Chunk 3 processed in 1.29 seconds. Total rows so far: 300000
+2025-05-08 00:23:04,523 - [32mINFO[0m - 
+[34mProcessing chunk 4 with [33m100,000[34m rows...[0m
+2025-05-08 00:23:04,533 - [32mINFO[0m - Adding new calculated columns...
+2025-05-08 00:23:05,056 - [32mINFO[0m - Parsing dates to split by day...
+2025-05-08 00:23:05,115 - [32mINFO[0m - [34mTags generated: [32m100,000 filled, [33m0 empty[0m
+2025-05-08 00:23:05,130 - [32mINFO[0m - [34mWriting data to 2 date-specific files...[0m
+2025-05-08 00:23:06,226 - [32mINFO[0m - Chunk 4 processed in 1.70 seconds. Total rows so far: 400000
+2025-05-08 00:23:07,130 - [32mINFO[0m - 
+[34mProcessing chunk 5 with [33m100,000[34m rows...[0m
+2025-05-08 00:23:07,140 - [32mINFO[0m - Adding new calculated columns...
+2025-05-08 00:23:07,666 - [32mINFO[0m - Parsing dates to split by day...
+2025-05-08 00:23:07,774 - [32mINFO[0m - [34mTags generated: [32m100,000 filled, [33m0 empty[0m
+2025-05-08 00:23:07,787 - [32mINFO[0m - [34mWriting data to 1 date-specific files...[0m
+2025-05-08 00:23:08,698 - [32mINFO[0m - Chunk 5 processed in 1.57 seconds. Total rows so far: 500000
+2025-05-08 00:23:09,358 - [32mINFO[0m - 
+[34mProcessing chunk 6 with [33m100,000[34m rows...[0m
+2025-05-08 00:23:09,366 - [32mINFO[0m - Adding new calculated columns...
+2025-05-08 00:23:09,944 - [32mINFO[0m - Parsing dates to split by day...
+2025-05-08 00:23:09,999 - [32mINFO[0m - [34mTags generated: [32m100,000 filled, [33m0 empty[0m
+2025-05-08 00:23:10,011 - [32mINFO[0m - [34mWriting data to 2 date-specific files...[0m
+2025-05-08 00:23:10,889 - [32mINFO[0m - Chunk 6 processed in 1.53 seconds. Total rows so far: 600000
+2025-05-08 00:23:11,563 - [32mINFO[0m - 
+[34mProcessing chunk 7 with [33m100,000[34m rows...[0m
+2025-05-08 00:23:11,572 - [32mINFO[0m - Adding new calculated columns...
+2025-05-08 00:23:12,069 - [32mINFO[0m - Parsing dates to split by day...
+2025-05-08 00:23:12,121 - [32mINFO[0m - [34mTags generated: [32m100,000 filled, [33m0 empty[0m
+2025-05-08 00:23:12,134 - [32mINFO[0m - [34mWriting data to 2 date-specific files...[0m
+2025-05-08 00:23:13,023 - [32mINFO[0m - Chunk 7 processed in 1.46 seconds. Total rows so far: 700000
+2025-05-08 00:23:13,732 - [32mINFO[0m - 
+[34mProcessing chunk 8 with [33m100,000[34m rows...[0m
+2025-05-08 00:23:13,741 - [32mINFO[0m - Adding new calculated columns...
+2025-05-08 00:23:14,112 - [32mINFO[0m - Parsing dates to split by day...
+2025-05-08 00:23:14,162 - [32mINFO[0m - [34mTags generated: [32m100,000 filled, [33m0 empty[0m
+2025-05-08 00:23:14,174 - [32mINFO[0m - [34mWriting data to 1 date-specific files...[0m
+2025-05-08 00:23:15,063 - [32mINFO[0m - Chunk 8 processed in 1.33 seconds. Total rows so far: 800000
+2025-05-08 00:23:15,577 - [32mINFO[0m - 
+[34mProcessing chunk 9 with [33m69,643[34m rows...[0m
+2025-05-08 00:23:15,583 - [32mINFO[0m - Adding new calculated columns...
+2025-05-08 00:23:15,837 - [32mINFO[0m - Parsing dates to split by day...
+2025-05-08 00:23:15,871 - [32mINFO[0m - [34mTags generated: [32m69,643 filled, [33m0 empty[0m
+2025-05-08 00:23:15,881 - [32mINFO[0m - [34mWriting data to 2 date-specific files...[0m
+2025-05-08 00:23:16,504 - [32mINFO[0m - Chunk 9 processed in 0.93 seconds. Total rows so far: 869643
+2025-05-08 00:23:16,504 - [32mINFO[0m - 
+[36m[1m==================================================
+2025-05-08 00:23:16,504 - [32mINFO[0m - [36m[1mPROCESSING SUMMARY
+2025-05-08 00:23:16,504 - [32mINFO[0m - [36m[1m==================================================
+2025-05-08 00:23:16,504 - [32mINFO[0m - 
+[32mTotal rows processed: [1m869,643
+2025-05-08 00:23:16,504 - [32mINFO[0m - [32mNumber of output files created: [1m7
+2025-05-08 00:23:16,504 - [32mINFO[0m - [32mProcessing time: [1m18.63 seconds
+
+2025-05-08 00:23:16,504 - [32mINFO[0m - [36mFiles created:
+2025-05-08 00:23:16,504 - [32mINFO[0m -   [33m► 7c8bd993-2025-04-22.csv: [1m49,855 rows, 14.96 MB
+2025-05-08 00:23:16,504 - [32mINFO[0m -   [33m► 7c8bd993-2025-04-23.csv: [1m156,084 rows, 46.92 MB
+2025-05-08 00:23:16,504 - [32mINFO[0m -   [33m► 7c8bd993-2025-04-24.csv: [1m143,112 rows, 43.01 MB
+2025-05-08 00:23:16,504 - [32mINFO[0m -   [33m► 7c8bd993-2025-04-25.csv: [1m156,271 rows, 47.18 MB
+2025-05-08 00:23:16,504 - [32mINFO[0m -   [33m► 7c8bd993-2025-04-26.csv: [1m143,445 rows, 43.34 MB
+2025-05-08 00:23:16,504 - [32mINFO[0m -   [33m► 7c8bd993-2025-04-27.csv: [1m129,484 rows, 39.03 MB
+2025-05-08 00:23:16,504 - [32mINFO[0m -   [33m► 7c8bd993-2025-04-28.csv: [1m91,392 rows, 27.52 MB
+2025-05-08 00:23:16,504 - [32mINFO[0m - 
+[32mTotal output size: [1m261.96 MB
+2025-05-08 00:23:16,504 - [32mINFO[0m - [36m[1m==================================================
+
+2025-05-08 00:23:16,516 - [32mINFO[0m - 
+[32m[1mCSV processing completed successfully![0m
