@@ -1,1 +1,0 @@
-sed -e ':a' -e 's/,,/,NA,/g' -e 't a' -e 's/^,/NA,/g' -e 's/,$/,NA/g' report_SMS_73fedb91_20241112.csv | column -s, -t | less -S
