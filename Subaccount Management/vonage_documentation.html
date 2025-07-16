@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vonage Subaccount Manager - Documentation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            color: #34495e;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: #2c3e50;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        h4 {
+            color: #34495e;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .header-info {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .version-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .info-box {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #28a745;
+        }
+        
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+        }
+        
+        .api-endpoint {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .workflow-step {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        
+        .workflow-step h4 {
+            margin-top: 0;
+            color: #1976d2;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
+        .security-warning {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #dc3545;
+        }
+        
+        .security-warning h4 {
+            color: #721c24;
+            margin-top: 0;
+        }
+        
+        .footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #ecf0f1;
+            text-align: center;
+            color: #7f8c8d;
+        }
+        
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; }
+            .page-break { page-break-before: always; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vonage Subaccount Manager</h1>
+        
+        <div class="header-info">
+            <div class="version-info">
+                <span><strong>Version:</strong> 1.0</span>
+                <span><strong>Release Date:</strong> July 15, 2025</span>
+                <span><strong>Developer:</strong> Romain EDIN (Vonage)</span>
+            </div>
+            <p><em>A desktop application for managing Vonage API accounts, subaccounts, and balance transfers</em></p>
+        </div>
+
+        <div class="security-warning">
+            <h4>⚠️ Important Disclaimer</h4>
+            <p>This software is provided "as-is" without any warranty. The developer, Romain EDIN, and Vonage assume no responsibility for any issues, bugs, data loss, or damages. Users bear full responsibility for using this program and should test it thoroughly before production use.</p>
+        </div>
+
+        <h2>Overview</h2>
+        
+        <p>The Vonage Subaccount Manager simplifies the management of Vonage API accounts, subaccounts, and balance transfers through a user-friendly desktop interface.</p>
+
+        <h3>Key Features</h3>
+        <ul>
+            <li><strong>Credential Management:</strong> Store and validate Vonage API credentials locally</li>
+            <li><strong>Account Monitoring:</strong> View master account balance, credit limit, and subaccount count</li>
+            <li><strong>Subaccount Management:</strong> List all subaccounts with detailed information</li>
+            <li><strong>Balance Transfers:</strong> Transfer credits between master and subaccounts</li>
+            <li><strong>Credit Limit Warnings:</strong> Visual alerts when accounts approach limits (red highlighting)</li>
+            <li><strong>Activity Logging:</strong> Comprehensive logging for audit and debugging</li>
+            <li><strong>Cross-Platform:</strong> Works on macOS and Windows</li>
+        </ul>
+
+        <h2>Installation & Setup</h2>
+
+        <h3>System Requirements</h3>
+        <ul>
+            <li><strong>Operating System:</strong> macOS 10.12+ or Windows 10+</li>
+            <li><strong>Python:</strong> 3.7 or higher</li>
+            <li><strong>Dependencies:</strong> requests library</li>
+            <li><strong>Network:</strong> Internet connection for API calls</li>
+        </ul>
+
+        <h3>Installation Steps</h3>
+        
+        <div class="workflow-step">
+            <h4>Step 1: Install Dependencies</h4>
+            <div class="code-block">pip install requests</div>
+        </div>
+
+        <div class="workflow-step">
+            <h4>Step 2: Run Application</h4>
+            <div class="code-block">python vonage_manager.py</div>
+        </div>
+
+        <h2>Usage Instructions</h2>
+
+        <h3>Getting Started</h3>
+
+        <div class="workflow-step">
+            <h4>1. Enter Credentials</h4>
+            <p>Enter your Vonage API Key and API Secret. Check "Save credentials" to store them locally.</p>
+        </div>
+
+        <div class="workflow-step">
+            <h4>2. Get Account Information</h4>
+            <p>Click "Get Account Information" to validate credentials and load all account data automatically.</p>
+        </div>
+
+        <div class="workflow-step">
+            <h4>3. Review Account Data</h4>
+            <p>View master account information and all subaccounts in the table. Accounts near credit limits are highlighted in red.</p>
+        </div>
+
+        <div class="workflow-step">
+            <h4>4. Transfer Balance (Optional)</h4>
+            <p>Select subaccounts, modify transfer amounts if needed, and click "Transfer Balance" to execute.</p>
+        </div>
+
+        <h3>User Interface</h3>
+
+        <h4>Main Sections</h4>
+        <ul>
+            <li><strong>Credentials:</strong> API key/secret input with save/load options</li>
+            <li><strong>Master Account:</strong> Balance, credit limit, subaccount count, account name</li>
+            <li><strong>Subaccounts:</strong> Table showing all subaccounts with totals and filter options</li>
+            <li><strong>Activity Log:</strong> Real-time logging of all operations</li>
+        </ul>
+
+        <h4>Balance Transfer Process</h4>
+        <ol>
+            <li>Transfer amounts are automatically prefilled with current balances</li>
+            <li>Double-click "Amount to Transfer" cells to modify amounts</li>
+            <li>Select accounts using checkboxes in the "Select" column</li>
+            <li>Click "Transfer Balance" to open confirmation dialog</li>
+            <li>Review transfer summary and confirm to execute</li>
+        </ol>
+
+        <h2>API Reference</h2>
+
+        <p>The application uses three Vonage APIs:</p>
+
+        <h3>1. Account Balance API</h3>
+        <div class="api-endpoint">
+            <strong>GET</strong> https://rest.nexmo.com/account/get-balance<br>
+            <strong>Purpose:</strong> Validate credentials and get master account balance
+        </div>
+
+        <h3>2. Subaccounts List API</h3>
+        <div class="api-endpoint">
+            <strong>GET</strong> https://api.nexmo.com/accounts/{api_key}/subaccounts<br>
+            <strong>Purpose:</strong> Retrieve all subaccounts and master account details
+        </div>
+
+        <h3>3. Balance Transfer API</h3>
+        <div class="api-endpoint">
+            <strong>POST</strong> https://api.nexmo.com/accounts/{from_account}/balance-transfers<br>
+            <strong>Purpose:</strong> Transfer balance between master and subaccounts
+        </div>
+
+        <h4>Authentication</h4>
+        <p>All APIs use HTTP Basic Authentication with your Vonage API Key and Secret.</p>
+
+        <h4>Rate Limits</h4>
+        <p>All APIs have a limit of 100 requests per minute.</p>
+
+        <h2>Security Considerations</h2>
+
+        <div class="security-warning">
+            <h4>🔒 Credential Storage</h4>
+            <p>Credentials are stored locally in <code>vonage_credentials.ini</code> using Base64 encoding. This is NOT encryption - it's basic obfuscation that can be easily decoded. Use this application only on trusted computers.</p>
+        </div>
+
+        <h3>Security Features</h3>
+        <ul>
+            <li><strong>Local Storage:</strong> No cloud storage or external transmission</li>
+            <li><strong>Audit Trail:</strong> Complete logging of all operations</li>
+            <li><strong>Input Validation:</strong> Sanitized user inputs</li>
+            <li><strong>Clear Warnings:</strong> Users are informed of security limitations</li>
+        </ul>
+
+        <h3>Best Practices</h3>
+        <ul>
+            <li>Use on trusted computers only</li>
+            <li>Regularly rotate API credentials</li>
+            <li>Monitor log files for unusual activity</li>
+            <li>Test in safe environment before production use</li>
+        </ul>
+
+        <h2>Logging & Auditing</h2>
+
+        <h3>Log Files</h3>
+        <ul>
+            <li><strong>General Activity:</strong> <code>logs/vonage_api_YYYYMMDD.log</code> - All application activities</li>
+            <li><strong>Transactions:</strong> <code>logs/vonage_transactions_YYYYMMDD.log</code> - Balance transfers only</li>
+        </ul>
+
+        <h3>Transaction Log Example</h3>
+        <div class="code-block">
+2025-07-15 15:30:45 - TRANSFER_SUCCESS: FROM=634ce15b TO=ef6f6ae2 AMOUNT=€25.50
+2025-07-15 15:31:12 - TRANSFER_FAILED: FROM=634ce15b TO=50e5af2b AMOUNT=€10.00 ERROR=Insufficient balance
+        </div>
+
+        <h2>Troubleshooting</h2>
+
+        <h3>Common Issues</h3>
+
+        <h4>Credential Validation Fails</h4>
+        <ul>
+            <li>Verify API Key and Secret are correct</li>
+            <li>Check for extra spaces in credentials</li>
+            <li>Ensure account is active and not suspended</li>
+        </ul>
+
+        <h4>Transfer Operations Fail</h4>
+        <ul>
+            <li>Ensure sufficient balance in master account</li>
+            <li>Verify subaccount is not suspended</li>
+            <li>Check transfer amount is positive</li>
+        </ul>
+
+        <h4>Application Won't Start</h4>
+        <ul>
+            <li>Verify Python 3.7+ is installed</li>
+            <li>Install requests: <code>pip install requests</code></li>
+            <li>Check file permissions</li>
+        </ul>
+
+        <h3>Getting Help</h3>
+        <ol>
+            <li>Check the built-in Help > Manual</li>
+            <li>Review the Activity Log for error messages</li>
+            <li>Check log files in the logs/ directory</li>
+            <li>Verify network connectivity</li>
+        </ol>
+
+        <h2>File Structure</h2>
+        <ul>
+            <li><strong>vonage_manager.py</strong> - Main application file</li>
+            <li><strong>vonage_credentials.ini</strong> - Stored credentials (created automatically)</li>
+            <li><strong>logs/</strong> - Directory for log files</li>
+        </ul>
+
+        <div class="footer">
+            <p><strong>Vonage Subaccount Manager v1.0</strong></p>
+            <p>Developed by Romain EDIN (Vonage) | July 15, 2025</p>
+            <p><em>This software is provided "as-is" without warranty. Users bear full responsibility for its use.</em></p>
+        </div>
+    </div>
+</body>
+</html>
