@@ -310,20 +310,15 @@ templates = Jinja2Templates(directory="templates")
 
 # Global instances
 log_queue = asyncio.Queue()
-api_client = None
 connected_websockets = []
 
+# Session storage for user API clients (in production, use Redis or database)
+user_sessions = {}
+
 async def startup_event():
-    """Initialize API client on startup."""
-    global api_client
-    
-    # Check if credentials are configured
-    if not os.getenv("VONAGE_API_KEY") or not os.getenv("VONAGE_API_SECRET"):
-        print("⚠️ WARNING: VONAGE_API_KEY and VONAGE_API_SECRET environment variables not set!")
-        print("   The application will not be able to connect to Vonage APIs.")
-        print("   Please set these environment variables in your hosting platform.")
-    
-    api_client = VonageNumbersAPIClient(log_queue=log_queue)
+    """Initialize application on startup."""
+    print("🚀 Vonage Numbers Manager started successfully!")
+    print("💡 Multi-user mode: Users will provide their own API credentials via the interface.")
 
 # Add startup event to FastAPI
 app.add_event_handler("startup", startup_event)
@@ -338,19 +333,39 @@ async def health_check():
     """Health check endpoint (no authentication required)."""
     return {"status": "healthy", "timestamp": datetime.now().isoformat()}
 
-@app.post("/api/connect", dependencies=[Depends(get_current_user)])
-async def connect_account():
-    """Connect to account and retrieve owned numbers."""
-    global api_client
-    
+@app.post("/api/disconnect", dependencies=[Depends(get_current_user)])
+async def disconnect_account(current_user: str = Depends(get_current_user)):
+    """Disconnect user account and clear session."""
     try:
-        if not api_client.api_key or not api_client.api_secret:
-            return {"success": False, "error": "API credentials not configured in environment variables"}
+        if current_user in user_sessions:
+            del user_sessions[current_user]
+            return {"success": True, "message": "Disconnected successfully"}
+        else:
+            return {"success": False, "error": "No active session found"}
+    except Exception as e:
+        return {"success": False, "error": str(e)}
+
+@app.get("/api/status", dependencies=[Depends(get_current_user)])
+async def get_connection_status(current_user: str = Depends(get_current_user)):
+    """Check if user is connected."""
+    connected = current_user in user_sessions
+    return {"connected": connected}
+
+@app.post("/api/connect", dependencies=[Depends(get_current_user)])
+async def connect_account(request: CredentialsRequest, current_user: str = Depends(get_current_user)):
+    """Connect to account with user-provided credentials and retrieve owned numbers."""
+    try:
+        # Create API client with user's credentials
+        api_client = VonageNumbersAPIClient(log_queue=log_queue)
+        api_client.set_credentials(request.api_key, request.api_secret)
         
-        # Get owned numbers
+        # Test connection by getting owned numbers
         result = api_client.get_owned_numbers()
         
         if result['success']:
+            # Store API client in user session
+            user_sessions[current_user] = api_client
+            
             return {
                 "success": True,
                 "data": result['data'],
@@ -363,24 +378,26 @@ async def connect_account():
         return {"success": False, "error": str(e)}
 
 @app.get("/api/numbers/owned", dependencies=[Depends(get_current_user)])
-async def get_owned_numbers():
-    """Get owned numbers."""
-    if not api_client:
-        raise HTTPException(status_code=400, detail="API client not initialized")
+async def get_owned_numbers(current_user: str = Depends(get_current_user)):
+    """Get owned numbers for the current user."""
+    if current_user not in user_sessions:
+        raise HTTPException(status_code=400, detail="Not connected. Please connect with your API credentials first.")
     
     try:
+        api_client = user_sessions[current_user]
         result = api_client.get_owned_numbers()
         return result
     except Exception as e:
         return {"success": False, "error": str(e)}
 
 @app.post("/api/numbers/search", dependencies=[Depends(get_current_user)])
-async def search_numbers(request: SearchRequest):
+async def search_numbers(request: SearchRequest, current_user: str = Depends(get_current_user)):
     """Search for available numbers."""
-    if not api_client:
-        raise HTTPException(status_code=400, detail="API client not initialized")
+    if current_user not in user_sessions:
+        raise HTTPException(status_code=400, detail="Not connected. Please connect with your API credentials first.")
     
     try:
+        api_client = user_sessions[current_user]
         params = {'country': request.country.upper()}
         
         if request.type:
@@ -396,24 +413,26 @@ async def search_numbers(request: SearchRequest):
         return {"success": False, "error": str(e)}
 
 @app.get("/api/subaccounts", dependencies=[Depends(get_current_user)])
-async def get_subaccounts():
+async def get_subaccounts(current_user: str = Depends(get_current_user)):
     """Get subaccounts for purchase assignment."""
-    if not api_client:
-        raise HTTPException(status_code=400, detail="API client not initialized")
+    if current_user not in user_sessions:
+        raise HTTPException(status_code=400, detail="Not connected. Please connect with your API credentials first.")
     
     try:
+        api_client = user_sessions[current_user]
         result = api_client.get_subaccounts()
         return result
     except Exception as e:
         return {"success": False, "error": str(e)}
 
 @app.post("/api/numbers/buy", dependencies=[Depends(get_current_user)])
-async def buy_numbers(request: PurchaseRequest):
+async def buy_numbers(request: PurchaseRequest, current_user: str = Depends(get_current_user)):
     """Buy selected numbers."""
-    if not api_client:
-        raise HTTPException(status_code=400, detail="API client not initialized")
+    if current_user not in user_sessions:
+        raise HTTPException(status_code=400, detail="Not connected. Please connect with your API credentials first.")
     
     try:
+        api_client = user_sessions[current_user]
         results = []
         
         for number in request.numbers:
@@ -453,12 +472,13 @@ async def buy_numbers(request: PurchaseRequest):
         return {"success": False, "error": str(e)}
 
 @app.post("/api/numbers/cancel", dependencies=[Depends(get_current_user)])
-async def cancel_numbers(request: CancelRequest):
+async def cancel_numbers(request: CancelRequest, current_user: str = Depends(get_current_user)):
     """Cancel selected numbers."""
-    if not api_client:
-        raise HTTPException(status_code=400, detail="API client not initialized")
+    if current_user not in user_sessions:
+        raise HTTPException(status_code=400, detail="Not connected. Please connect with your API credentials first.")
     
     try:
+        api_client = user_sessions[current_user]
         results = []
         
         for number in request.numbers:

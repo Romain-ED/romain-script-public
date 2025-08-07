@@ -11,8 +11,8 @@ let logWebSocket = null;
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Vonage Numbers Manager - Web Interface Loaded');
     
-    // Load saved credentials on startup
-    loadCredentials(true);
+    // Check connection status on startup
+    checkConnectionStatus();
     
     // Initialize WebSocket for real-time logging
     initializeWebSocket();
@@ -803,13 +803,139 @@ function showCancellationResults(data) {
     showModal('resultsModal');
 }
 
+// Connection Status Check
+async function checkConnectionStatus() {
+    try {
+        const response = await fetch('/api/status');
+        if (response.ok) {
+            const result = await response.json();
+            isConnected = result.connected;
+            
+            if (isConnected) {
+                updateStatus('Connected to Vonage account', 'success');
+                // Refresh owned numbers if connected
+                await refreshOwnedNumbers();
+            } else {
+                updateStatus('Not connected - please enter credentials', 'info');
+            }
+            
+            updateButtonStates();
+        }
+    } catch (error) {
+        console.log('Could not check connection status:', error.message);
+        updateStatus('Enter credentials and click Connect Account', 'info');
+    }
+}
+
+// Disconnect from account
+async function disconnectAccount() {
+    try {
+        showLoading('Disconnecting...');
+        
+        const response = await fetch('/api/disconnect', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+            isConnected = false;
+            ownedNumbers = [];
+            availableNumbers = [];
+            selectedOwned.clear();
+            selectedAvailable.clear();
+            
+            // Clear displays
+            updateOwnedNumbersDisplay();
+            updateAvailableNumbersDisplay();
+            
+            updateStatus('Disconnected successfully', 'info');
+            updateButtonStates();
+            addLogEntry('Disconnected from account', 'info');
+        } else {
+            updateStatus(`Disconnect failed: ${result.error}`, 'error');
+        }
+    } catch (error) {
+        updateStatus('Disconnect error occurred', 'error');
+        addLogEntry(`Disconnect error: ${error.message}`, 'error');
+    } finally {
+        hideLoading();
+    }
+}
+
+// Load saved credentials (for backwards compatibility - now just a placeholder)
+function loadCredentials(silent = false) {
+    if (!silent) {
+        updateStatus('Multi-user mode: Please enter your credentials manually', 'info');
+    }
+}
+
+// Clear saved credentials (for backwards compatibility - now just a placeholder)
+function clearCredentials() {
+    // Clear the input fields
+    document.getElementById('apiKey').value = '';
+    document.getElementById('apiSecret').value = '';
+    document.getElementById('saveCredentials').checked = false;
+    
+    updateStatus('Credential fields cleared', 'info');
+    addLogEntry('Credential fields cleared', 'info');
+}
+
+// Refresh owned numbers
+async function refreshOwnedNumbers() {
+    if (!isConnected) {
+        updateStatus('Not connected to account', 'error');
+        return;
+    }
+    
+    try {
+        showLoading('Refreshing owned numbers...');
+        
+        const response = await fetch('/api/numbers/owned');
+        const result = await response.json();
+        
+        if (result.success) {
+            ownedNumbers = result.data.numbers || [];
+            updateOwnedNumbersDisplay();
+            updateStatus(`Refreshed - ${ownedNumbers.length} numbers found`, 'success');
+            addLogEntry(`Refreshed owned numbers: ${ownedNumbers.length} found`, 'info');
+        } else {
+            updateStatus(`Refresh failed: ${result.error}`, 'error');
+            addLogEntry(`Failed to refresh numbers: ${result.error}`, 'error');
+        }
+    } catch (error) {
+        updateStatus('Refresh error occurred', 'error');
+        addLogEntry(`Refresh error: ${error.message}`, 'error');
+    } finally {
+        hideLoading();
+    }
+}
+
 // Button State Management
 function updateButtonStates() {
     // Connection-dependent buttons
     const connectionButtons = ['refreshBtn', 'searchBtn'];
     connectionButtons.forEach(btnId => {
-        document.getElementById(btnId).disabled = !isConnected;
+        const button = document.getElementById(btnId);
+        if (button) {
+            button.disabled = !isConnected;
+        }
     });
+    
+    // Update connect/disconnect button
+    const connectBtn = document.getElementById('connectBtn');
+    if (isConnected) {
+        connectBtn.innerHTML = '<i class="fas fa-plug"></i> Disconnect';
+        connectBtn.onclick = disconnectAccount;
+        connectBtn.className = 'btn btn-warning';
+    } else {
+        connectBtn.innerHTML = '<i class="fas fa-plug"></i> Connect Account';
+        connectBtn.onclick = connectAccount;
+        connectBtn.className = 'btn btn-primary';
+    }
     
     // Update cancel button
     updateCancelButton();
