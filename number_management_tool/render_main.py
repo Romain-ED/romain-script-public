@@ -271,6 +271,13 @@ class VonageNumbersAPIClient:
             error_msg = f"Unexpected error: {str(e)}"
             self._log_message(error_msg, "ERROR")
             return {'success': False, 'error': error_msg}
+    
+    def get_account_balance(self) -> Dict[str, Any]:
+        """Get account balance information."""
+        if not self.auth_header:
+            return {'success': False, 'error': 'API credentials not configured'}
+            
+        return self._make_request('GET', '/account/get-balance')
 
 
 # Pydantic models for API requests
@@ -466,6 +473,33 @@ async def get_subaccounts(current_user: str = Depends(get_current_user)):
         api_client = user_sessions[current_user]
         result = api_client.get_subaccounts()
         return result
+    except Exception as e:
+        return {"success": False, "error": str(e)}
+
+@app.get("/api/account/info", dependencies=[Depends(get_current_user)])
+async def get_account_info(current_user: str = Depends(get_current_user)):
+    """Get account balance and subaccounts information."""
+    if current_user not in user_sessions:
+        raise HTTPException(status_code=400, detail="Not connected. Please connect with your API credentials first.")
+    
+    try:
+        api_client = user_sessions[current_user]
+        
+        # Get account balance
+        balance_result = api_client.get_account_balance()
+        
+        # Get subaccounts
+        subaccounts_result = api_client.get_subaccounts()
+        
+        return {
+            "success": True,
+            "data": {
+                "balance": balance_result.get('data') if balance_result['success'] else None,
+                "balance_error": balance_result.get('error') if not balance_result['success'] else None,
+                "subaccounts": subaccounts_result.get('data') if subaccounts_result['success'] else None,
+                "subaccounts_error": subaccounts_result.get('error') if not subaccounts_result['success'] else None
+            }
+        }
     except Exception as e:
         return {"success": False, "error": str(e)}
 

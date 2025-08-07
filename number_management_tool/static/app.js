@@ -312,6 +312,9 @@ async function connectAccount() {
             updateButtonStates();
             addLogEntry(`Connected successfully - ${ownedNumbers.length} numbers found`, 'info');
             
+            // Load account information after successful connection
+            await loadAccountInfo();
+            
             if (saveCredentials) {
                 addLogEntry('Credentials auto-saved', 'info');
             }
@@ -854,6 +857,7 @@ async function disconnectAccount() {
             // Clear displays
             updateOwnedNumbersDisplay();
             updateAvailableNumbersDisplay();
+            clearAccountDisplay();
             
             updateStatus('Disconnected successfully', 'info');
             updateButtonStates();
@@ -940,11 +944,182 @@ function updateButtonStates() {
         connectBtn.className = 'btn btn-primary';
     }
     
+    // Update account info refresh button
+    const refreshAccountBtn = document.getElementById('refreshAccountBtn');
+    if (refreshAccountBtn) {
+        refreshAccountBtn.disabled = !isConnected;
+    }
+    
     // Update cancel button
     updateCancelButton();
     
     // Update buy button
     updateBuyButton();
+}
+
+// Account Information Management
+async function loadAccountInfo() {
+    if (!isConnected) {
+        clearAccountDisplay();
+        return;
+    }
+    
+    try {
+        const response = await fetch('/api/account/info');
+        const result = await response.json();
+        
+        if (result.success) {
+            displayAccountInfo(result.data);
+        } else {
+            showAccountError(result.error || 'Failed to load account information');
+        }
+    } catch (error) {
+        showAccountError(`Error loading account info: ${error.message}`);
+    }
+}
+
+function displayAccountInfo(data) {
+    // Display account balance
+    displayAccountBalance(data.balance, data.balance_error);
+    
+    // Display subaccounts
+    displaySubaccounts(data.subaccounts, data.subaccounts_error);
+}
+
+function displayAccountBalance(balance, error) {
+    const balanceContainer = document.getElementById('accountBalance');
+    if (!balanceContainer) return;
+    
+    if (error) {
+        balanceContainer.innerHTML = `
+            <div class="balance-placeholder">
+                <i class="fas fa-exclamation-triangle"></i> Error: ${error}
+            </div>
+        `;
+        return;
+    }
+    
+    if (balance && balance.value !== undefined) {
+        balanceContainer.innerHTML = `
+            <div class="balance-amount">${balance.value}</div>
+            <div class="balance-currency">${balance.currency || 'EUR'}</div>
+        `;
+    } else {
+        balanceContainer.innerHTML = `
+            <div class="balance-placeholder">
+                <i class="fas fa-question-circle"></i> Balance information not available
+            </div>
+        `;
+    }
+}
+
+function displaySubaccounts(subaccounts, error) {
+    const subaccountsContainer = document.getElementById('subaccountsList');
+    if (!subaccountsContainer) return;
+    
+    if (error) {
+        subaccountsContainer.innerHTML = `
+            <div class="subaccounts-placeholder">
+                <i class="fas fa-exclamation-triangle"></i> Error: ${error}
+            </div>
+        `;
+        return;
+    }
+    
+    if (subaccounts && subaccounts._embedded && subaccounts._embedded.subaccounts) {
+        const subaccountList = subaccounts._embedded.subaccounts;
+        
+        if (subaccountList.length === 0) {
+            subaccountsContainer.innerHTML = `
+                <div class="subaccounts-placeholder">
+                    <i class="fas fa-info-circle"></i> No subaccounts found
+                </div>
+            `;
+            return;
+        }
+        
+        let html = '';
+        subaccountList.forEach(subaccount => {
+            html += `
+                <div class="subaccount-item">
+                    <div>
+                        <div class="subaccount-name">${subaccount.name || 'Unnamed'}</div>
+                        <div class="subaccount-key">${subaccount.api_key}</div>
+                    </div>
+                    <div class="subaccount-balance">
+                        ${subaccount.balance || '0.00'} ${subaccount.currency || 'EUR'}
+                    </div>
+                </div>
+            `;
+        });
+        
+        subaccountsContainer.innerHTML = html;
+    } else {
+        subaccountsContainer.innerHTML = `
+            <div class="subaccounts-placeholder">
+                <i class="fas fa-info-circle"></i> No subaccounts available
+            </div>
+        `;
+    }
+}
+
+function clearAccountDisplay() {
+    const balanceContainer = document.getElementById('accountBalance');
+    const subaccountsContainer = document.getElementById('subaccountsList');
+    
+    if (balanceContainer) {
+        balanceContainer.innerHTML = `
+            <div class="balance-placeholder">
+                <i class="fas fa-plug"></i> Connect to view balance
+            </div>
+        `;
+    }
+    
+    if (subaccountsContainer) {
+        subaccountsContainer.innerHTML = `
+            <div class="subaccounts-placeholder">
+                <i class="fas fa-plug"></i> Connect to view subaccounts
+            </div>
+        `;
+    }
+}
+
+function showAccountError(message) {
+    const balanceContainer = document.getElementById('accountBalance');
+    const subaccountsContainer = document.getElementById('subaccountsList');
+    
+    if (balanceContainer) {
+        balanceContainer.innerHTML = `
+            <div class="balance-placeholder">
+                <i class="fas fa-exclamation-triangle"></i> ${message}
+            </div>
+        `;
+    }
+    
+    if (subaccountsContainer) {
+        subaccountsContainer.innerHTML = `
+            <div class="subaccounts-placeholder">
+                <i class="fas fa-exclamation-triangle"></i> ${message}
+            </div>
+        `;
+    }
+}
+
+async function refreshAccountInfo() {
+    if (!isConnected) {
+        updateStatus('Not connected to account', 'error');
+        return;
+    }
+    
+    try {
+        showLoading('Refreshing account information...');
+        await loadAccountInfo();
+        addLogEntry('Account information refreshed', 'info');
+    } catch (error) {
+        addLogEntry(`Failed to refresh account info: ${error.message}`, 'error');
+    } finally {
+        hideLoading();
+    }
 }
 
 // Version and Changelog Management

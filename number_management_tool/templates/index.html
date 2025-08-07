@@ -26,38 +26,72 @@
             </div>
         </header>
 
-        <!-- Credentials Section -->
-        <section class="card credentials-section">
-            <h2><i class="fas fa-key"></i> API Credentials</h2>
-            <div class="form-grid">
-                <div class="form-group">
-                    <label for="apiKey">API Key:</label>
-                    <input type="text" id="apiKey" placeholder="Enter your Vonage API Key">
+        <!-- Credentials and Account Information Container -->
+        <div class="credentials-account-container">
+            <!-- Credentials Section -->
+            <section class="card credentials-section">
+                <h2><i class="fas fa-key"></i> API Credentials</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="apiKey">API Key:</label>
+                        <input type="text" id="apiKey" placeholder="Enter your Vonage API Key">
+                    </div>
+                    <div class="form-group">
+                        <label for="apiSecret">API Secret:</label>
+                        <input type="password" id="apiSecret" placeholder="Enter your Vonage API Secret">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="apiSecret">API Secret:</label>
-                    <input type="password" id="apiSecret" placeholder="Enter your Vonage API Secret">
+                
+                <div class="button-group">
+                    <button class="btn btn-primary" id="connectBtn" onclick="connectAccount()">
+                        <i class="fas fa-plug"></i> Connect Account
+                    </button>
+                    <button class="btn btn-secondary" id="clearCredsBtn" onclick="clearCredentials()">
+                        <i class="fas fa-times"></i> Clear Fields
+                    </button>
                 </div>
-            </div>
-            
-            <div class="button-group">
-                <button class="btn btn-primary" id="connectBtn" onclick="connectAccount()">
-                    <i class="fas fa-plug"></i> Connect Account
-                </button>
-                <button class="btn btn-secondary" id="clearCredsBtn" onclick="clearCredentials()">
-                    <i class="fas fa-times"></i> Clear Fields
-                </button>
-            </div>
-            
-            <div class="status-message" id="connectionStatus">
-                Enter credentials and click Connect Account
-            </div>
-            
-            <div class="warning">
-                <i class="fas fa-exclamation-triangle"></i>
-                Credentials are stored locally with basic encoding. Use at your own risk.
-            </div>
-        </section>
+                
+                <div class="status-message" id="connectionStatus">
+                    Enter credentials and click Connect Account
+                </div>
+                
+                <div class="warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Multi-user mode: Credentials are session-based only
+                </div>
+            </section>
+
+            <!-- Account Information Section -->
+            <section class="card account-info-section">
+                <h2><i class="fas fa-user-circle"></i> Account Information</h2>
+                
+                <!-- Account Balance -->
+                <div class="info-group">
+                    <h3><i class="fas fa-wallet"></i> Account Balance</h3>
+                    <div id="accountBalance" class="balance-display">
+                        <div class="balance-placeholder">
+                            <i class="fas fa-plug"></i> Connect to view balance
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Subaccounts -->
+                <div class="info-group">
+                    <h3><i class="fas fa-sitemap"></i> Subaccounts</h3>
+                    <div id="subaccountsList" class="subaccounts-list">
+                        <div class="subaccounts-placeholder">
+                            <i class="fas fa-plug"></i> Connect to view subaccounts
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-secondary" id="refreshAccountBtn" onclick="refreshAccountInfo()" disabled>
+                        <i class="fas fa-sync-alt"></i> Refresh Info
+                    </button>
+                </div>
+            </section>
+        </div>
 
         <!-- Owned Numbers Section -->
         <section class="card owned-numbers-section">
