@@ -1,7 +1,25 @@
 {
-    "version": "2.0.0",
+    "version": "2.1.0",
     "release_date": "2025-01-07",
     "changelog": [
+        {
+            "version": "2.1.0",
+            "date": "2025-01-07",
+            "type": "minor",
+            "title": "Account Information Dashboard & UI Improvements",
+            "changes": [
+                "💰 NEW: Account balance display with real-time updates",
+                "🏢 NEW: Subaccounts panel showing names, keys, and balances",
+                "📊 NEW: Side-by-side layout for credentials and account info",
+                "📱 NEW: Responsive grid layout (stacks on mobile)",
+                "🔄 NEW: Refresh button for account information",
+                "🎨 NEW: Versioning system with changelog modal",
+                "🔧 FIX: Header button layout (no more overlapping)",
+                "🔧 FIX: Connect button functionality issues",
+                "🐛 FIX: Missing Pydantic models causing deployment errors",
+                "⚡ NEW: /api/account/info endpoint combining balance + subaccounts"
+            ]
+        },
         {
             "version": "2.0.0",
             "date": "2025-01-07",
