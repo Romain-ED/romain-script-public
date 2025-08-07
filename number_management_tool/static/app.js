@@ -925,9 +925,13 @@ function displayAccountBalance(balance, error) {
     }
     
     if (balance && balance.value !== undefined) {
+        const creditLimitDisplay = balance.credit_limit ? 
+            `<div class="credit-limit">Credit Limit: ${balance.credit_limit} ${balance.currency || 'EUR'}</div>` : '';
+        
         balanceContainer.innerHTML = `
             <div class="balance-amount">${balance.value}</div>
             <div class="balance-currency">${balance.currency || 'EUR'}</div>
+            ${creditLimitDisplay}
         `;
     } else {
         balanceContainer.innerHTML = `
@@ -965,14 +969,20 @@ function displaySubaccounts(subaccounts, error) {
         
         let html = '';
         subaccountList.forEach(subaccount => {
+            const creditLimitInfo = subaccount.credit_limit ? 
+                `<div class="subaccount-credit-limit">Limit: ${subaccount.credit_limit} ${subaccount.currency || 'EUR'}</div>` : '';
+            
             html += `
                 <div class="subaccount-item">
                     <div>
                         <div class="subaccount-name">${subaccount.name || 'Unnamed'}</div>
                         <div class="subaccount-key">${subaccount.api_key}</div>
                     </div>
-                    <div class="subaccount-balance">
-                        ${subaccount.balance || '0.00'} ${subaccount.currency || 'EUR'}
+                    <div class="subaccount-info">
+                        <div class="subaccount-balance">
+                            ${subaccount.balance || '0.00'} ${subaccount.currency || 'EUR'}
+                        </div>
+                        ${creditLimitInfo}
                     </div>
                 </div>
             `;

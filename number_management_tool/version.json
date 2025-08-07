@@ -17,7 +17,9 @@
                 "🔧 FIX: Header button layout (no more overlapping)",
                 "🔧 FIX: Connect button functionality issues",
                 "🐛 FIX: Missing Pydantic models causing deployment errors",
-                "⚡ NEW: /api/account/info endpoint combining balance + subaccounts"
+                "⚡ NEW: /api/account/info endpoint combining balance + subaccounts",
+                "🎨 NEW: Vonage logo added to header (top left corner)",
+                "💳 NEW: Credit limit display for master account and subaccounts"
             ]
         },
         {
