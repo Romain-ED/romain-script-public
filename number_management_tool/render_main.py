@@ -313,7 +313,6 @@ log_queue = asyncio.Queue()
 api_client = None
 connected_websockets = []
 
-@app.on_startup
 async def startup_event():
     """Initialize API client on startup."""
     global api_client
@@ -325,6 +324,9 @@ async def startup_event():
         print("   Please set these environment variables in your hosting platform.")
     
     api_client = VonageNumbersAPIClient(log_queue=log_queue)
+
+# Add startup event to FastAPI
+app.add_event_handler("startup", startup_event)
 
 @app.get("/", response_class=HTMLResponse, dependencies=[Depends(get_current_user)])
 async def read_root(request: Request):
