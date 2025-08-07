@@ -308,6 +308,25 @@ app.add_middleware(
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
+# Pydantic models for API requests
+class CredentialsRequest(BaseModel):
+    api_key: str
+    api_secret: str
+    save_credentials: bool = False
+
+class SearchRequest(BaseModel):
+    country: str
+    type: Optional[str] = None
+    features: Optional[str] = None
+    size: int = 30
+
+class PurchaseRequest(BaseModel):
+    numbers: List[Dict[str, Any]]
+    target_api_key: Optional[str] = None
+
+class CancelRequest(BaseModel):
+    numbers: List[Dict[str, Any]]
+
 # Global instances
 log_queue = asyncio.Queue()
 connected_websockets = []
