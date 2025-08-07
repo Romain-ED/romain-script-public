@@ -26,6 +26,10 @@ body {
     margin-bottom: 30px;
     color: white;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 .header h1 {
@@ -41,9 +45,6 @@ body {
 }
 
 .help-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
     background: rgba(255,255,255,0.2);
     color: white;
     border: 2px solid rgba(255,255,255,0.3);
@@ -53,6 +54,7 @@ body {
     font-size: 0.9em;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+    white-space: nowrap;
 }
 
 .help-btn:hover {
@@ -763,8 +765,10 @@ body {
 
 .header-buttons {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Changelog Styles */
@@ -865,6 +869,12 @@ body {
     
     .header-buttons {
         justify-content: center;
+        gap: 10px;
+    }
+    
+    .help-btn {
+        padding: 8px 12px;
+        font-size: 0.8em;
     }
     
     .changelog-version {
