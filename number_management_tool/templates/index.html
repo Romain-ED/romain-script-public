@@ -375,22 +375,27 @@
                 </div>
                 
                 <div id="overview" class="help-content active">
-                    <h4>Vonage Numbers Manager v1.0 - Web Interface</h4>
-                    <p>This web application simplifies the management of Vonage phone numbers through an intuitive interface.</p>
+                    <h4>Vonage Numbers Manager v2.1.0 - Multi-User Web Interface</h4>
+                    <p>This web application simplifies the management of Vonage phone numbers through an intuitive, multi-user interface.</p>
                     
                     <h5>Key Features:</h5>
                     <ul>
-                        <li><strong>Credential Management:</strong> Secure local storage of API credentials</li>
+                        <li><strong>Multi-User Support:</strong> Each user provides their own credentials (no shared storage)</li>
+                        <li><strong>Account Dashboard:</strong> View balance and subaccounts at a glance</li>
                         <li><strong>View Owned Numbers:</strong> Complete listing of your phone numbers</li>
                         <li><strong>Search Available Numbers:</strong> Find new numbers with advanced filtering</li>
                         <li><strong>Purchase Numbers:</strong> Buy numbers with subaccount assignment</li>
                         <li><strong>Cancel Numbers:</strong> Remove unwanted numbers (irreversible)</li>
-                        <li><strong>Real-time Logging:</strong> Live activity monitoring</li>
+                        <li><strong>Real-time Logging:</strong> Live activity monitoring via WebSocket</li>
+                        <li><strong>Responsive Design:</strong> Works perfectly on desktop and mobile devices</li>
                     </ul>
                     
                     <div class="disclaimer">
-                        <strong>Important:</strong> This software is provided "as-is" without warranty. 
-                        Users bear full responsibility for any consequences of using this application.
+                        <strong>⚠️ WARRANTY DISCLAIMER:</strong> This software is provided "as-is" without any warranty. 
+                        The developer, <strong>Romain EDIN</strong>, and <strong>Vonage</strong> assume no responsibility 
+                        for any issues, bugs, data loss, or damages that may occur from using this application. 
+                        Users bear <strong>full responsibility</strong> for using this program and should test it thoroughly 
+                        before production use. Always backup your data and verify all operations before executing them.
                     </div>
                 </div>
                 
@@ -515,6 +520,22 @@
             </div>
         </div>
     </div>
+
+    <!-- Warranty Disclaimer -->
+    <footer class="warranty-disclaimer">
+        <div class="disclaimer-content">
+            <h4><i class="fas fa-exclamation-triangle"></i> Important Disclaimer</h4>
+            <p>
+                <strong>This software is provided "as-is" without any warranty.</strong> 
+                The developer, <strong>Romain EDIN</strong>, and <strong>Vonage</strong> assume no responsibility 
+                for any issues, bugs, data loss, or damages that may occur from using this application.
+            </p>
+            <p>
+                Users bear <strong>full responsibility</strong> for using this program and should test it thoroughly 
+                before production use. Always backup your data and verify all operations before executing them.
+            </p>
+        </div>
+    </footer>
 
     <!-- Loading Overlay -->
     <div id="loadingOverlay" class="loading-overlay">

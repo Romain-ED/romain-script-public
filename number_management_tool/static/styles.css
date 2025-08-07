@@ -987,3 +987,79 @@ body {
         gap: 20px;
     }
 }
+
+/* Warranty Disclaimer Styles */
+.warranty-disclaimer {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    padding: 30px 20px;
+    margin-top: 40px;
+    border-top: 3px solid #e74c3c;
+    text-align: center;
+}
+
+.disclaimer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.warranty-disclaimer h4 {
+    color: #f39c12;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.warranty-disclaimer h4 i {
+    color: #e74c3c;
+}
+
+.warranty-disclaimer p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 0.95em;
+    opacity: 0.9;
+}
+
+.warranty-disclaimer p:last-child {
+    margin-bottom: 0;
+}
+
+.warranty-disclaimer strong {
+    color: #f39c12;
+}
+
+/* Enhanced disclaimer in modals */
+.disclaimer {
+    background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+    border: 2px solid #f39c12;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    color: #856404;
+    line-height: 1.5;
+}
+
+.disclaimer strong {
+    color: #d68910;
+}
+
+/* Responsive adjustments for disclaimer */
+@media (max-width: 768px) {
+    .warranty-disclaimer {
+        padding: 20px 15px;
+    }
+    
+    .warranty-disclaimer h4 {
+        font-size: 1.1em;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .warranty-disclaimer p {
+        font-size: 0.9em;
+    }
+}
