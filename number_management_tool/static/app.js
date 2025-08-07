@@ -202,83 +202,13 @@ async function loadCredentials(silent = false) {
     updateButtonStates();
 }
 
-async function saveCredentials() {
-    const apiKey = document.getElementById('apiKey').value.trim();
-    const apiSecret = document.getElementById('apiSecret').value.trim();
-    
-    if (!apiKey || !apiSecret) {
-        updateStatus('Please enter both API key and secret before saving', 'error');
-        return;
-    }
-    
-    try {
-        showLoading('Saving credentials...');
-        
-        const response = await fetch('/api/credentials/save', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                api_key: apiKey,
-                api_secret: apiSecret,
-                save_credentials: true
-            })
-        });
-        
-        const result = await response.json();
-        
-        if (result.success) {
-            updateStatus('Credentials saved successfully', 'success');
-            addLogEntry('Credentials saved to storage', 'info');
-        } else {
-            updateStatus(`Failed to save credentials: ${result.error}`, 'error');
-            addLogEntry(`Failed to save credentials: ${result.error}`, 'error');
-        }
-    } catch (error) {
-        updateStatus('Error saving credentials', 'error');
-        addLogEntry(`Error saving credentials: ${error.message}`, 'error');
-    } finally {
-        hideLoading();
-        updateButtonStates();
-    }
-}
-
-async function clearCredentials() {
-    if (!confirm('Are you sure you want to delete saved credentials?')) {
-        return;
-    }
-    
-    try {
-        showLoading('Clearing credentials...');
-        
-        const response = await fetch('/api/credentials', {
-            method: 'DELETE'
-        });
-        
-        const result = await response.json();
-        
-        if (result.success) {
-            updateStatus('Saved credentials cleared', 'success');
-            addLogEntry('Saved credentials cleared', 'info');
-        } else {
-            updateStatus(`Failed to clear credentials: ${result.error}`, 'error');
-            addLogEntry(`Failed to clear credentials: ${result.error}`, 'error');
-        }
-    } catch (error) {
-        updateStatus('Error clearing credentials', 'error');
-        addLogEntry(`Error clearing credentials: ${error.message}`, 'error');
-    } finally {
-        hideLoading();
-        updateButtonStates();
-    }
-}
+// Removed old saveCredentials and clearCredentials functions 
+// (incompatible with multi-user mode)
 
 // Connection and Account Management
 async function connectAccount() {
     const apiKey = document.getElementById('apiKey').value.trim();
     const apiSecret = document.getElementById('apiSecret').value.trim();
-    const saveCredentials = document.getElementById('saveCredentials').checked;
     
     if (!apiKey || !apiSecret) {
         updateStatus('Please enter both API key and secret', 'error');
@@ -297,7 +227,7 @@ async function connectAccount() {
             body: JSON.stringify({
                 api_key: apiKey,
                 api_secret: apiSecret,
-                save_credentials: saveCredentials
+                save_credentials: false  // Multi-user mode: no credential saving
             })
         });
         
@@ -314,10 +244,6 @@ async function connectAccount() {
             
             // Load account information after successful connection
             await loadAccountInfo();
-            
-            if (saveCredentials) {
-                addLogEntry('Credentials auto-saved', 'info');
-            }
         } else {
             isConnected = false;
             updateStatus(`Connection failed: ${result.error}`, 'error');
@@ -885,7 +811,6 @@ function clearCredentials() {
     // Clear the input fields
     document.getElementById('apiKey').value = '';
     document.getElementById('apiSecret').value = '';
-    document.getElementById('saveCredentials').checked = false;
     
     updateStatus('Credential fields cleared', 'info');
     addLogEntry('Credential fields cleared', 'info');
