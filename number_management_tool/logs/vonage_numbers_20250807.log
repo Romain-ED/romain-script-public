@@ -1,0 +1,8 @@
+2025-08-07 09:57:09,564 - VonageNumbersAPI - INFO - Credentials set for API key: 634ce15b...
+2025-08-07 09:57:09,565 - VonageNumbersAPI - INFO - Making GET request to https://rest.nexmo.com/account/numbers
+2025-08-07 09:57:10,306 - VonageNumbersAPI - INFO - Response status: 200
+2025-08-07 09:57:10,306 - VonageNumbersAPI - INFO - Request successful
+2025-08-07 09:57:14,438 - VonageNumbersAPI - INFO - Making GET request to https://rest.nexmo.com/number/search
+2025-08-07 09:57:14,438 - VonageNumbersAPI - INFO - Parameters: {'country': 'US', 'features': 'SMS', 'size': 30}
+2025-08-07 09:57:17,882 - VonageNumbersAPI - INFO - Response status: 200
+2025-08-07 09:57:17,883 - VonageNumbersAPI - INFO - Request successful

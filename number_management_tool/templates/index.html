@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vonage Numbers Manager</title>
+    <link href="/static/styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1><i class="fas fa-phone"></i> Vonage Numbers Manager</h1>
+            <p class="subtitle">Web interface for managing Vonage phone numbers</p>
+            <button class="help-btn" onclick="showModal('helpModal')">
+                <i class="fas fa-question-circle"></i> Help
+            </button>
+        </header>
+
+        <!-- Credentials Section -->
+        <section class="card credentials-section">
+            <h2><i class="fas fa-key"></i> API Credentials</h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="apiKey">API Key:</label>
+                    <input type="text" id="apiKey" placeholder="Enter your Vonage API Key">
+                </div>
+                <div class="form-group">
+                    <label for="apiSecret">API Secret:</label>
+                    <input type="password" id="apiSecret" placeholder="Enter your Vonage API Secret">
+                </div>
+            </div>
+            
+            <div class="form-options">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="saveCredentials">
+                    <span class="checkmark"></span>
+                    Save credentials on successful connection
+                </label>
+            </div>
+            
+            <div class="button-group">
+                <button class="btn btn-primary" id="connectBtn" onclick="connectAccount()">
+                    <i class="fas fa-plug"></i> Connect Account
+                </button>
+                <button class="btn btn-secondary" id="loadCredsBtn" onclick="loadCredentials()">
+                    <i class="fas fa-download"></i> Load Saved
+                </button>
+                <button class="btn btn-secondary" id="clearCredsBtn" onclick="clearCredentials()">
+                    <i class="fas fa-trash"></i> Clear Saved
+                </button>
+            </div>
+            
+            <div class="status-message" id="connectionStatus">
+                Enter credentials and click Connect Account
+            </div>
+            
+            <div class="warning">
+                <i class="fas fa-exclamation-triangle"></i>
+                Credentials are stored locally with basic encoding. Use at your own risk.
+            </div>
+        </section>
+
+        <!-- Owned Numbers Section -->
+        <section class="card owned-numbers-section">
+            <h2><i class="fas fa-mobile-alt"></i> Your Phone Numbers</h2>
+            <div class="section-header">
+                <div class="numbers-count">
+                    Total Numbers: <span id="numbersCount">0</span>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary" id="refreshBtn" onclick="refreshNumbers()" disabled>
+                        <i class="fas fa-sync-alt"></i> Refresh
+                    </button>
+                    <button class="btn btn-danger" id="cancelBtn" onclick="cancelSelectedNumbers()" disabled>
+                        <i class="fas fa-times"></i> Cancel Selected
+                    </button>
+                </div>
+            </div>
+            
+            <div class="table-container">
+                <table class="data-table" id="ownedNumbersTable">
+                    <thead>
+                        <tr>
+                            <th width="50px">
+                                <input type="checkbox" id="selectAllOwned" onchange="toggleAllOwned()">
+                            </th>
+                            <th>Country</th>
+                            <th>Phone Number</th>
+                            <th>Type</th>
+                            <th>Features</th>
+                            <th>Application ID</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ownedNumbersBody">
+                        <tr>
+                            <td colspan="6" class="empty-state">
+                                Connect to your account to view your phone numbers
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Search Numbers Section -->
+        <section class="card search-section">
+            <h2><i class="fas fa-search"></i> Search Available Numbers</h2>
+            
+            <div class="search-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="countryCode">Country Code (ISO 3166-1):</label>
+                        <input type="text" id="countryCode" placeholder="e.g., US, GB, FR" maxlength="2">
+                        <small>Two-letter country code</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="numberType">Number Type:</label>
+                        <select id="numberType">
+                            <option value="">Any Type</option>
+                            <option value="landline">Landline</option>
+                            <option value="mobile-lvn">Mobile</option>
+                            <option value="landline-toll-free">Toll-free</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="features">Features:</label>
+                        <select id="features">
+                            <option value="Any">Any</option>
+                            <option value="SMS">SMS</option>
+                            <option value="VOICE">VOICE</option>
+                            <option value="SMS,VOICE">SMS + VOICE</option>
+                            <option value="MMS">MMS</option>
+                            <option value="SMS,MMS">SMS + MMS</option>
+                            <option value="VOICE,MMS">VOICE + MMS</option>
+                            <option value="SMS,MMS,VOICE">SMS + MMS + VOICE</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="resultsSize">Results to show:</label>
+                        <input type="number" id="resultsSize" value="30" min="1" max="100">
+                        <small>Maximum 100</small>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-primary" id="searchBtn" onclick="searchNumbers()" disabled>
+                        <i class="fas fa-search"></i> Search Available Numbers
+                    </button>
+                    <button class="btn btn-success" id="buyBtn" onclick="buySelectedNumbers()" disabled>
+                        <i class="fas fa-shopping-cart"></i> Buy Selected Numbers
+                    </button>
+                </div>
+            </div>
+            
+            <div class="search-results" id="searchResults">
+                Enter search criteria and click Search
+            </div>
+            
+            <div class="table-container">
+                <table class="data-table" id="availableNumbersTable">
+                    <thead>
+                        <tr>
+                            <th width="50px">
+                                <input type="checkbox" id="selectAllAvailable" onchange="toggleAllAvailable()">
+                            </th>
+                            <th>Country</th>
+                            <th>Phone Number</th>
+                            <th>Type</th>
+                            <th>Initial Price</th>
+                            <th>Monthly Cost</th>
+                            <th>Features</th>
+                        </tr>
+                    </thead>
+                    <tbody id="availableNumbersBody">
+                        <tr>
+                            <td colspan="7" class="empty-state">
+                                Use the search form above to find available numbers
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Activity Log Section -->
+        <section class="card log-section">
+            <h2><i class="fas fa-clipboard-list"></i> Activity Log</h2>
+            <div class="log-container">
+                <div class="log-content" id="logContent">
+                    <div class="log-entry info">
+                        <span class="timestamp">[--:--:--]</span>
+                        <span class="level">INFO:</span>
+                        <span class="message">Welcome to Vonage Numbers Manager</span>
+                    </div>
+                </div>
+            </div>
+            <div class="log-controls">
+                <button class="btn btn-secondary btn-sm" onclick="clearLog()">
+                    <i class="fas fa-trash"></i> Clear Log
+                </button>
+                <button class="btn btn-secondary btn-sm" onclick="toggleAutoScroll()">
+                    <i class="fas fa-arrows-alt-v"></i> <span id="autoScrollText">Disable Auto-scroll</span>
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Purchase Confirmation Modal -->
+    <div id="purchaseModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-shopping-cart"></i> Confirm Purchase</h3>
+                <span class="close" onclick="closeModal('purchaseModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="purchase-summary">
+                    <div class="summary-item">
+                        <strong>Numbers selected:</strong> <span id="purchaseCount">0</span>
+                    </div>
+                    <div class="summary-item">
+                        <strong>Total initial cost:</strong> <span id="purchaseInitialCost">€0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <strong>Total monthly cost:</strong> <span id="purchaseMonthlyCost">€0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <label for="subaccountSelect"><strong>Assign to subaccount:</strong></label>
+                        <select id="subaccountSelect">
+                            <option value="">Master Account (default)</option>
+                        </select>
+                        <small id="subaccountStatus">Loading subaccounts...</small>
+                    </div>
+                </div>
+                
+                <div class="purchase-numbers">
+                    <h4>Selected Numbers:</h4>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Country</th>
+                                    <th>Number</th>
+                                    <th>Type</th>
+                                    <th>Initial Price</th>
+                                    <th>Monthly Cost</th>
+                                </tr>
+                            </thead>
+                            <tbody id="purchaseNumbersList"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal('purchaseModal')">Cancel</button>
+                <button class="btn btn-success" onclick="confirmPurchase()">
+                    <i class="fas fa-check"></i> Confirm Purchase
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cancellation Confirmation Modal -->
+    <div id="cancelModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-exclamation-triangle"></i> Confirm Cancellation</h3>
+                <span class="close" onclick="closeModal('cancelModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="warning-box">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <strong>Warning:</strong> This action is IRREVERSIBLE and will:
+                    <ul>
+                        <li>Immediately remove these numbers from your account</li>
+                        <li>Stop all incoming calls and messages to these numbers</li>
+                        <li>Cancel any associated monthly charges</li>
+                        <li>Make these numbers unavailable for future use</li>
+                    </ul>
+                </div>
+                
+                <div class="cancel-numbers">
+                    <h4>Numbers to Cancel: <span id="cancelCount">0</span></h4>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Country</th>
+                                    <th>Phone Number</th>
+                                    <th>Type</th>
+                                    <th>Features</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cancelNumbersList"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal('cancelModal')">No, Keep Numbers</button>
+                <button class="btn btn-danger" onclick="confirmCancellation()">
+                    <i class="fas fa-trash"></i> Yes, Cancel Numbers
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Modal -->
+    <div id="resultsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="resultsTitle">Operation Results</h3>
+                <span class="close" onclick="closeModal('resultsModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="results-summary" id="resultsSummary"></div>
+                <div class="results-details">
+                    <textarea id="resultsDetails" readonly></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="closeModal('resultsModal')">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="helpModal" class="modal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h3><i class="fas fa-question-circle"></i> Vonage Numbers Manager - Help</h3>
+                <span class="close" onclick="closeModal('helpModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="help-tabs">
+                    <button class="help-tab active" onclick="showHelpTab('overview')">Overview</button>
+                    <button class="help-tab" onclick="showHelpTab('getting-started')">Getting Started</button>
+                    <button class="help-tab" onclick="showHelpTab('features')">Features</button>
+                    <button class="help-tab" onclick="showHelpTab('troubleshooting')">Troubleshooting</button>
+                </div>
+                
+                <div id="overview" class="help-content active">
+                    <h4>Vonage Numbers Manager v1.0 - Web Interface</h4>
+                    <p>This web application simplifies the management of Vonage phone numbers through an intuitive interface.</p>
+                    
+                    <h5>Key Features:</h5>
+                    <ul>
+                        <li><strong>Credential Management:</strong> Secure local storage of API credentials</li>
+                        <li><strong>View Owned Numbers:</strong> Complete listing of your phone numbers</li>
+                        <li><strong>Search Available Numbers:</strong> Find new numbers with advanced filtering</li>
+                        <li><strong>Purchase Numbers:</strong> Buy numbers with subaccount assignment</li>
+                        <li><strong>Cancel Numbers:</strong> Remove unwanted numbers (irreversible)</li>
+                        <li><strong>Real-time Logging:</strong> Live activity monitoring</li>
+                    </ul>
+                    
+                    <div class="disclaimer">
+                        <strong>Important:</strong> This software is provided "as-is" without warranty. 
+                        Users bear full responsibility for any consequences of using this application.
+                    </div>
+                </div>
+                
+                <div id="getting-started" class="help-content">
+                    <h4>Getting Started</h4>
+                    
+                    <h5>1. Connect Your Account</h5>
+                    <ol>
+                        <li>Enter your Vonage API Key and Secret</li>
+                        <li>Check "Save credentials" to store them locally</li>
+                        <li>Click "Connect Account"</li>
+                        <li>Your phone numbers will load automatically</li>
+                    </ol>
+                    
+                    <h5>2. View Your Numbers</h5>
+                    <p>After connecting, all your owned numbers appear in the "Your Phone Numbers" section with details like country, type, features, and application ID.</p>
+                    
+                    <h5>3. Search for New Numbers</h5>
+                    <ol>
+                        <li>Enter a country code (e.g., US, GB, FR)</li>
+                        <li>Select number type and features</li>
+                        <li>Set results limit (1-100)</li>
+                        <li>Click "Search Available Numbers"</li>
+                    </ol>
+                    
+                    <h5>4. Purchase Numbers</h5>
+                    <ol>
+                        <li>Select desired numbers using checkboxes</li>
+                        <li>Click "Buy Selected Numbers"</li>
+                        <li>Review costs and optionally assign to subaccount</li>
+                        <li>Confirm purchase</li>
+                    </ol>
+                    
+                    <h5>5. Cancel Numbers</h5>
+                    <ol>
+                        <li>Select numbers to cancel in your owned numbers</li>
+                        <li>Click "Cancel Selected"</li>
+                        <li>Read warning carefully - this action is irreversible</li>
+                        <li>Confirm cancellation</li>
+                    </ol>
+                </div>
+                
+                <div id="features" class="help-content">
+                    <h4>Detailed Features</h4>
+                    
+                    <h5>Credential Management</h5>
+                    <ul>
+                        <li><strong>Local Storage:</strong> Credentials stored on your computer only</li>
+                        <li><strong>Auto-load:</strong> Saved credentials load automatically</li>
+                        <li><strong>Security:</strong> Basic encoding (not encryption)</li>
+                    </ul>
+                    
+                    <h5>Number Management</h5>
+                    <ul>
+                        <li><strong>Real-time View:</strong> Live display of owned numbers</li>
+                        <li><strong>Bulk Operations:</strong> Select multiple numbers for batch operations</li>
+                        <li><strong>Detailed Info:</strong> Country, type, features, application assignment</li>
+                    </ul>
+                    
+                    <h5>Search & Purchase</h5>
+                    <ul>
+                        <li><strong>Advanced Filtering:</strong> By country, type, features</li>
+                        <li><strong>Cost Calculation:</strong> Automatic totaling of costs</li>
+                        <li><strong>Subaccount Assignment:</strong> Direct assignment during purchase</li>
+                    </ul>
+                    
+                    <h5>Activity Logging</h5>
+                    <ul>
+                        <li><strong>Real-time Updates:</strong> Live log streaming</li>
+                        <li><strong>Complete Audit Trail:</strong> All API calls logged</li>
+                        <li><strong>Error Tracking:</strong> Detailed error information</li>
+                    </ul>
+                </div>
+                
+                <div id="troubleshooting" class="help-content">
+                    <h4>Troubleshooting</h4>
+                    
+                    <h5>Connection Issues</h5>
+                    <ul>
+                        <li><strong>Invalid credentials:</strong> Verify API key and secret</li>
+                        <li><strong>Network errors:</strong> Check internet connection</li>
+                        <li><strong>Account issues:</strong> Ensure account is active</li>
+                    </ul>
+                    
+                    <h5>Search Problems</h5>
+                    <ul>
+                        <li><strong>No results:</strong> Try different country codes or filters</li>
+                        <li><strong>Invalid country:</strong> Use 2-letter ISO codes (US, GB, etc.)</li>
+                    </ul>
+                    
+                    <h5>Purchase/Cancel Failures</h5>
+                    <ul>
+                        <li><strong>Insufficient balance:</strong> Check account balance</li>
+                        <li><strong>Permission denied:</strong> Verify account permissions</li>
+                        <li><strong>Number unavailable:</strong> Number may have been taken</li>
+                    </ul>
+                    
+                    <h5>Getting Help</h5>
+                    <p>Check the Activity Log for detailed error messages. For Vonage API issues, consult the official documentation or contact Vonage support.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="closeModal('helpModal')">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p id="loadingText">Loading...</p>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
