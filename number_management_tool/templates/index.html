@@ -11,11 +11,19 @@
     <div class="container">
         <!-- Header -->
         <header class="header">
-            <h1><i class="fas fa-phone"></i> Vonage Numbers Manager</h1>
+            <div class="header-main">
+                <h1><i class="fas fa-phone"></i> Vonage Numbers Manager</h1>
+                <span class="version-badge" id="versionBadge">v2.0.0</span>
+            </div>
             <p class="subtitle">Multi-user web interface for managing Vonage phone numbers</p>
-            <button class="help-btn" onclick="showModal('helpModal')">
-                <i class="fas fa-question-circle"></i> Help
-            </button>
+            <div class="header-buttons">
+                <button class="help-btn" onclick="showModal('changelogModal')">
+                    <i class="fas fa-history"></i> Changelog
+                </button>
+                <button class="help-btn" onclick="showModal('helpModal')">
+                    <i class="fas fa-question-circle"></i> Help
+                </button>
+            </div>
         </header>
 
         <!-- Credentials Section -->
@@ -452,6 +460,24 @@
             </div>
             <div class="modal-footer">
                 <button class="btn btn-primary" onclick="closeModal('helpModal')">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Changelog Modal -->
+    <div id="changelogModal" class="modal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h3><i class="fas fa-history"></i> Changelog</h3>
+                <span class="close" onclick="closeModal('changelogModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="changelogContent">
+                    <div class="loading-text">Loading changelog...</div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="closeModal('changelogModal')">Close</button>
             </div>
         </div>
     </div>

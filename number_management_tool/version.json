@@ -1,0 +1,62 @@
+{
+    "version": "2.0.0",
+    "release_date": "2025-01-07",
+    "changelog": [
+        {
+            "version": "2.0.0",
+            "date": "2025-01-07",
+            "type": "major",
+            "title": "Multi-User Architecture",
+            "changes": [
+                "✨ NEW: Multi-user support - each user provides their own credentials",
+                "🔒 SECURITY: Per-user session management instead of global credentials",
+                "🚫 REMOVED: Environment variable dependency for API keys",
+                "🔄 IMPROVED: Dynamic connect/disconnect functionality",
+                "📱 NEW: Real-time connection status checking",
+                "🎨 UI: Updated interface to reflect multi-user capabilities"
+            ]
+        },
+        {
+            "version": "1.2.0", 
+            "date": "2025-01-06",
+            "type": "minor",
+            "title": "Render Deployment Compatibility",
+            "changes": [
+                "🐛 FIX: FastAPI startup event compatibility",
+                "📦 FIX: Dependency conflicts for cloud deployment", 
+                "🐍 FIX: Python 3.11 compatibility for Render",
+                "⚙️ IMPROVED: Runtime configuration for deployment"
+            ]
+        },
+        {
+            "version": "1.1.0",
+            "date": "2025-01-05", 
+            "type": "minor",
+            "title": "Enhanced Web Interface",
+            "changes": [
+                "🔐 NEW: HTTP Basic Authentication for security",
+                "🌐 NEW: CORS middleware for cross-origin requests",
+                "📊 NEW: Health check endpoints",
+                "🎨 IMPROVED: Web interface styling and UX",
+                "🔄 NEW: WebSocket real-time logging"
+            ]
+        },
+        {
+            "version": "1.0.0",
+            "date": "2025-01-04",
+            "type": "major", 
+            "title": "Initial Release",
+            "changes": [
+                "🎉 NEW: Complete Vonage Numbers Manager web application",
+                "📞 NEW: Search available phone numbers by country",
+                "💰 NEW: Purchase phone numbers with subaccount support", 
+                "❌ NEW: Cancel existing phone numbers",
+                "👥 NEW: Subaccount management integration",
+                "🖥️ NEW: FastAPI backend with REST API",
+                "🎨 NEW: Responsive web interface",
+                "💾 NEW: Local credential storage and management",
+                "📋 NEW: Real-time activity logging"
+            ]
+        }
+    ]
+}

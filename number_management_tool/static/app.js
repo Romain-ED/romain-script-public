@@ -11,6 +11,9 @@ let logWebSocket = null;
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Vonage Numbers Manager - Web Interface Loaded');
     
+    // Load version information
+    loadVersionInfo();
+    
     // Check connection status on startup
     checkConnectionStatus();
     
@@ -942,4 +945,82 @@ function updateButtonStates() {
     
     // Update buy button
     updateBuyButton();
+}
+
+// Version and Changelog Management
+async function loadVersionInfo() {
+    try {
+        const response = await fetch('/api/version');
+        const versionData = await response.json();
+        
+        if (versionData.version) {
+            // Update version badge
+            const versionBadge = document.getElementById('versionBadge');
+            if (versionBadge) {
+                versionBadge.textContent = `v${versionData.version}`;
+            }
+            
+            // Store changelog data for modal
+            window.changelogData = versionData;
+            
+            console.log(`Vonage Numbers Manager v${versionData.version} loaded`);
+        }
+    } catch (error) {
+        console.log('Could not load version info:', error.message);
+    }
+}
+
+
+function displayChangelog(versionData) {
+    const changelogContent = document.getElementById('changelogContent');
+    if (!changelogContent) return;
+    
+    let html = `<div class="changelog-header">
+        <h4>Vonage Numbers Manager v${versionData.version}</h4>
+        <p class="release-date">Released: ${versionData.release_date}</p>
+    </div>`;
+    
+    versionData.changelog.forEach(release => {
+        const typeClass = release.type === 'major' ? 'major' : release.type === 'minor' ? 'minor' : 'patch';
+        const typeIcon = release.type === 'major' ? '🚀' : release.type === 'minor' ? '✨' : '🐛';
+        
+        html += `
+            <div class="changelog-entry ${typeClass}">
+                <div class="changelog-version">
+                    <span class="version-number">${typeIcon} v${release.version}</span>
+                    <span class="version-date">${release.date}</span>
+                </div>
+                <h5 class="version-title">${release.title}</h5>
+                <ul class="changelog-list">
+                    ${release.changes.map(change => `<li>${change}</li>`).join('')}
+                </ul>
+            </div>
+        `;
+    });
+    
+    changelogContent.innerHTML = html;
+}
+
+// Modal Management
+function showModal(modalId) {
+    if (modalId === 'changelogModal') {
+        // Load changelog content when modal is opened
+        if (window.changelogData && window.changelogData.changelog) {
+            displayChangelog(window.changelogData);
+        } else {
+            // Fallback if version data not loaded
+            loadVersionInfo().then(() => {
+                if (window.changelogData) {
+                    displayChangelog(window.changelogData);
+                }
+            });
+        }
+    }
+    
+    // Show modal
+    document.getElementById(modalId).style.display = 'flex';
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
 }

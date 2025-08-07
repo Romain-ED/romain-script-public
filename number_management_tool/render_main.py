@@ -333,6 +333,31 @@ async def health_check():
     """Health check endpoint (no authentication required)."""
     return {"status": "healthy", "timestamp": datetime.now().isoformat()}
 
+@app.get("/api/version")
+async def get_version():
+    """Get application version and changelog (no authentication required)."""
+    try:
+        version_file_path = os.path.join(os.path.dirname(__file__), "version.json")
+        with open(version_file_path, "r") as f:
+            version_data = json.load(f)
+        return version_data
+    except FileNotFoundError:
+        return {
+            "version": "2.0.0",
+            "release_date": "2025-01-07", 
+            "changelog": [
+                {
+                    "version": "2.0.0",
+                    "date": "2025-01-07",
+                    "type": "major",
+                    "title": "Multi-User Architecture",
+                    "changes": ["Multi-user support with per-user credentials"]
+                }
+            ]
+        }
+    except Exception as e:
+        return {"error": f"Could not load version info: {str(e)}"}
+
 @app.post("/api/disconnect", dependencies=[Depends(get_current_user)])
 async def disconnect_account(current_user: str = Depends(get_current_user)):
     """Disconnect user account and clear session."""
