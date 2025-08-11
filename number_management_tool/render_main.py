@@ -606,15 +606,27 @@ async def websocket_logs(websocket: WebSocket):
             # Get log messages from queue
             try:
                 log_message = await asyncio.wait_for(log_queue.get(), timeout=1.0)
-                await websocket.send_text(json.dumps(log_message))
+                if websocket.client_state.name != "DISCONNECTED":
+                    await websocket.send_text(json.dumps(log_message))
+                else:
+                    break
             except asyncio.TimeoutError:
-                # Send ping to keep connection alive
-                await websocket.send_text(json.dumps({"type": "ping"}))
+                # Send ping to keep connection alive only if still connected
+                if websocket.client_state.name != "DISCONNECTED":
+                    try:
+                        await websocket.send_text(json.dumps({"type": "ping"}))
+                    except Exception:
+                        break
+                else:
+                    break
             except Exception as e:
                 print(f"Error sending log message: {e}")
                 break
                 
     except WebSocketDisconnect:
+        pass
+    except Exception as e:
+        print(f"WebSocket error: {e}")
         pass
     finally:
         if websocket in connected_websockets:
