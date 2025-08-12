@@ -446,32 +446,86 @@
                 <div id="features" class="help-content">
                     <h4>Detailed Features</h4>
                     
-                    <h5>Credential Management</h5>
+                    <h5><i class="fas fa-user-shield"></i> Multi-User Session Management</h5>
                     <ul>
-                        <li><strong>Local Storage:</strong> Credentials stored on your computer only</li>
-                        <li><strong>Auto-load:</strong> Saved credentials load automatically</li>
-                        <li><strong>Security:</strong> Basic encoding (not encryption)</li>
+                        <li><strong>Session-based Credentials:</strong> Each user provides their own API credentials (no shared storage)</li>
+                        <li><strong>Secure Isolation:</strong> Multiple users can work simultaneously without credential conflicts</li>
+                        <li><strong>Auto-disconnect:</strong> Sessions expire automatically for security</li>
+                        <li><strong>No Persistent Storage:</strong> Credentials are cleared when session ends</li>
                     </ul>
                     
-                    <h5>Number Management</h5>
+                    <h5><i class="fas fa-wallet"></i> Account Dashboard</h5>
                     <ul>
-                        <li><strong>Real-time View:</strong> Live display of owned numbers</li>
-                        <li><strong>Bulk Operations:</strong> Select multiple numbers for batch operations</li>
-                        <li><strong>Detailed Info:</strong> Country, type, features, application assignment</li>
+                        <li><strong>Real-time Balance:</strong> Live account balance display with currency formatting</li>
+                        <li><strong>Credit Limits:</strong> Visual indicators for account credit status</li>
+                        <li><strong>Subaccount Overview:</strong> Complete list of all subaccounts with details</li>
+                        <li><strong>One-click Refresh:</strong> Update account information instantly</li>
                     </ul>
                     
-                    <h5>Search & Purchase</h5>
+                    <h5><i class="fas fa-mobile-alt"></i> Comprehensive Number Management</h5>
                     <ul>
-                        <li><strong>Advanced Filtering:</strong> By country, type, features</li>
-                        <li><strong>Cost Calculation:</strong> Automatic totaling of costs</li>
-                        <li><strong>Subaccount Assignment:</strong> Direct assignment during purchase</li>
+                        <li><strong>Complete Inventory:</strong> View all owned numbers with full details (country, type, features, applications)</li>
+                        <li><strong>Bulk Selection:</strong> Select all/individual numbers for batch operations</li>
+                        <li><strong>Live Counter:</strong> Real-time count of total owned numbers</li>
+                        <li><strong>Instant Refresh:</strong> Update number list with latest information from Vonage</li>
+                        <li><strong>Application Tracking:</strong> See which applications are assigned to each number</li>
                     </ul>
                     
-                    <h5>Activity Logging</h5>
+                    <h5><i class="fas fa-search"></i> Advanced Number Search</h5>
                     <ul>
-                        <li><strong>Real-time Updates:</strong> Live log streaming</li>
-                        <li><strong>Complete Audit Trail:</strong> All API calls logged</li>
-                        <li><strong>Error Tracking:</strong> Detailed error information</li>
+                        <li><strong>Global Coverage:</strong> Search numbers from any country using ISO 3166-1 codes</li>
+                        <li><strong>Type Filtering:</strong> Filter by landline, mobile, or toll-free numbers</li>
+                        <li><strong>Feature Combinations:</strong> Search for specific feature sets (SMS, VOICE, MMS combinations)</li>
+                        <li><strong>Flexible Results:</strong> Configurable result limits (1-100 numbers)</li>
+                        <li><strong>Price Transparency:</strong> Display both initial purchase cost and monthly fees</li>
+                        <li><strong>Smart Selection:</strong> Select all or individual numbers for purchase</li>
+                    </ul>
+                    
+                    <h5><i class="fas fa-shopping-cart"></i> Intelligent Purchase System</h5>
+                    <ul>
+                        <li><strong>Cost Calculator:</strong> Automatic calculation of total initial and monthly costs</li>
+                        <li><strong>Subaccount Assignment:</strong> Assign numbers to specific subaccounts during purchase</li>
+                        <li><strong>Purchase Preview:</strong> Review all selected numbers before confirming</li>
+                        <li><strong>Bulk Purchase:</strong> Buy multiple numbers in a single transaction</li>
+                        <li><strong>Transaction Results:</strong> Detailed success/failure reports for each number</li>
+                        <li><strong>Balance Validation:</strong> Check account balance before purchase</li>
+                    </ul>
+                    
+                    <h5><i class="fas fa-trash-alt"></i> Safe Number Cancellation</h5>
+                    <ul>
+                        <li><strong>Multi-step Confirmation:</strong> Multiple warning dialogs to prevent accidental cancellations</li>
+                        <li><strong>Impact Warning:</strong> Clear explanation of cancellation consequences</li>
+                        <li><strong>Bulk Cancellation:</strong> Cancel multiple numbers simultaneously</li>
+                        <li><strong>Detailed Results:</strong> Complete report of successful/failed cancellations</li>
+                        <li><strong>Immediate Effect:</strong> Numbers are cancelled instantly and removed from inventory</li>
+                    </ul>
+                    
+                    <h5><i class="fas fa-stream"></i> Real-time Activity Monitoring</h5>
+                    <ul>
+                        <li><strong>Live WebSocket Logging:</strong> Real-time activity updates without page refresh</li>
+                        <li><strong>Complete Audit Trail:</strong> All API calls, responses, and errors logged with timestamps</li>
+                        <li><strong>Color-coded Messages:</strong> Visual distinction between info, success, error, and warning messages</li>
+                        <li><strong>Auto-scroll Control:</strong> Toggle automatic scrolling to follow latest activity</li>
+                        <li><strong>Log Management:</strong> Clear logs on demand to reduce clutter</li>
+                        <li><strong>Error Details:</strong> Comprehensive error information for troubleshooting</li>
+                    </ul>
+                    
+                    <h5><i class="fas fa-mobile"></i> Cross-platform Compatibility</h5>
+                    <ul>
+                        <li><strong>Responsive Design:</strong> Optimized for desktop, tablet, and mobile devices</li>
+                        <li><strong>Universal Browser Support:</strong> Works with Chrome, Firefox, Safari, Edge</li>
+                        <li><strong>Touch-friendly Interface:</strong> Large buttons and touch targets for mobile use</li>
+                        <li><strong>Flexible Layout:</strong> Adapts to different screen sizes and orientations</li>
+                        <li><strong>Keyboard Navigation:</strong> Full keyboard accessibility support</li>
+                    </ul>
+                    
+                    <h5><i class="fas fa-shield-alt"></i> Security & Reliability</h5>
+                    <ul>
+                        <li><strong>No Cloud Storage:</strong> All operations performed locally with direct API calls</li>
+                        <li><strong>Input Validation:</strong> Comprehensive validation of all user inputs</li>
+                        <li><strong>Error Recovery:</strong> Graceful handling of network failures and API errors</li>
+                        <li><strong>Rate Limiting Awareness:</strong> Respects Vonage API rate limits</li>
+                        <li><strong>Connection Monitoring:</strong> Automatic detection of connectivity issues</li>
                     </ul>
                 </div>
                 
