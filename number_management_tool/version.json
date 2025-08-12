@@ -1,7 +1,27 @@
 {
-    "version": "2.2.1",
+    "version": "2.2.2",
     "release_date": "2025-01-12",
     "changelog": [
+        {
+            "version": "2.2.2",
+            "date": "2025-01-12",
+            "changes": [
+                {
+                    "type": "fix",
+                    "title": "Robust Balance Validation Fix",
+                    "description": "Fixed balance validation to properly fetch and verify account balance in purchase modal.",
+                    "details": [
+                        "Add fallback API call to fetch fresh balance data when cached balance unavailable",
+                        "Make balance validation async to handle API calls properly",
+                        "Add comprehensive debug logging to track balance validation process",
+                        "Handle edge cases where currentAccountBalance is null or undefined",
+                        "Add warning message when balance verification fails",
+                        "Increase DOM rendering delay to ensure elements are ready",
+                        "Fix issue where €20 balance vs €27.90 cost wasn't showing insufficient balance warning"
+                    ]
+                }
+            ]
+        },
         {
             "version": "2.2.1",
             "date": "2025-01-12",
