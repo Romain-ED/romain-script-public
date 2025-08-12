@@ -3,6 +3,37 @@
     "release_date": "2025-01-07",
     "changelog": [
         {
+            "version": "2.2.0",
+            "date": "2025-01-12",
+            "changes": [
+                {
+                    "type": "feature",
+                    "title": "Balance Validation Before Purchase",
+                    "description": "Added automatic account balance checking before confirming number purchases to prevent insufficient fund errors.",
+                    "details": [
+                        "Check account balance against total purchase cost before showing confirmation modal",
+                        "Display insufficient balance warning modal with current balance, required amount, and shortage",
+                        "Provide direct link to Vonage dashboard for account top-up",
+                        "Add comprehensive styling for balance summary and action suggestions",
+                        "Log balance validation events for complete audit trail",
+                        "Prevent accidental purchases when account funds are insufficient"
+                    ]
+                },
+                {
+                    "type": "enhancement",
+                    "title": "Enhanced Help Documentation",
+                    "description": "Expanded the Features section in help with comprehensive details about all tool capabilities.",
+                    "details": [
+                        "Added 8 detailed feature categories with icons and descriptions",
+                        "Documented multi-user session management and account dashboard features",
+                        "Detailed advanced search, purchase system, and cancellation processes",
+                        "Explained real-time monitoring and cross-platform compatibility",
+                        "Added security and reliability information for user confidence"
+                    ]
+                }
+            ]
+        },
+        {
             "version": "2.1.0",
             "date": "2025-01-07",
             "type": "minor",
