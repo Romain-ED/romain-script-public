@@ -516,17 +516,6 @@ async function buySelectedNumbers() {
         totalMonthly += parseFloat(number.cost || 0);
     });
     
-    // Check account balance before proceeding
-    if (currentAccountBalance && currentAccountBalance.value !== undefined) {
-        const currentBalance = parseFloat(currentAccountBalance.value);
-        
-        if (currentBalance < totalInitial) {
-            // Show insufficient balance warning
-            showInsufficientBalanceWarning(currentBalance, totalInitial, currentAccountBalance.currency || 'EUR');
-            return;
-        }
-    }
-    
     // Populate purchase modal
     document.getElementById('purchaseCount').textContent = selectedNumbers.length;
     document.getElementById('purchaseInitialCost').textContent = `€${totalInitial.toFixed(2)}`;
@@ -543,6 +532,9 @@ async function buySelectedNumbers() {
             <td>€${number.cost || '0.00'}</td>
         </tr>
     `).join('');
+    
+    // Check account balance and show warning if insufficient
+    checkAndShowBalanceWarning(totalInitial, currentAccountBalance);
     
     // Load subaccounts
     await loadSubaccounts();
@@ -1153,28 +1145,42 @@ function closeModal(modalId) {
 }
 
 // Balance validation functions
-function showInsufficientBalanceWarning(currentBalance, requiredAmount, currency) {
-    const currencySymbol = currency === 'EUR' ? '€' : currency === 'USD' ? '$' : currency === 'GBP' ? '£' : currency;
-    const shortage = requiredAmount - currentBalance;
+function checkAndShowBalanceWarning(requiredAmount, accountBalance) {
+    const warningElement = document.getElementById('insufficientBalanceWarning');
+    const confirmButton = document.querySelector('#purchaseModal .btn-success');
     
-    // Update modal content
-    document.getElementById('currentBalanceAmount').textContent = `${currencySymbol}${currentBalance.toFixed(2)}`;
-    document.getElementById('requiredAmount').textContent = `${currencySymbol}${requiredAmount.toFixed(2)}`;
-    document.getElementById('shortageAmount').textContent = `${currencySymbol}${shortage.toFixed(2)}`;
+    // Hide warning by default
+    warningElement.style.display = 'none';
+    confirmButton.disabled = false;
+    confirmButton.innerHTML = '<i class="fas fa-check"></i> Confirm Purchase';
     
-    // Show the insufficient balance modal
-    showModal('insufficientBalanceModal');
-    
-    // Log the insufficient balance warning
-    addLogEntry(`Insufficient balance: Need ${currencySymbol}${requiredAmount.toFixed(2)}, have ${currencySymbol}${currentBalance.toFixed(2)}`, 'warning');
+    if (accountBalance && accountBalance.value !== undefined) {
+        const currentBalance = parseFloat(accountBalance.value);
+        const currency = accountBalance.currency || 'EUR';
+        const currencySymbol = currency === 'EUR' ? '€' : currency === 'USD' ? '$' : currency === 'GBP' ? '£' : currency;
+        
+        if (currentBalance < requiredAmount) {
+            const shortage = requiredAmount - currentBalance;
+            
+            // Update warning content
+            document.getElementById('modalCurrentBalance').textContent = `${currencySymbol}${currentBalance.toFixed(2)}`;
+            document.getElementById('modalRequiredAmount').textContent = `${currencySymbol}${requiredAmount.toFixed(2)}`;
+            document.getElementById('modalShortageAmount').textContent = `${currencySymbol}${shortage.toFixed(2)}`;
+            
+            // Show warning and disable button
+            warningElement.style.display = 'block';
+            confirmButton.disabled = true;
+            confirmButton.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Insufficient Balance';
+            
+            // Log the insufficient balance warning
+            addLogEntry(`Insufficient balance: Need ${currencySymbol}${requiredAmount.toFixed(2)}, have ${currencySymbol}${currentBalance.toFixed(2)}`, 'warning');
+        }
+    }
 }
 
 function openVonageTopUp() {
     // Open Vonage dashboard in a new tab for account top-up
     window.open('https://dashboard.nexmo.com/billing', '_blank');
-    
-    // Close the insufficient balance modal
-    closeModal('insufficientBalanceModal');
     
     // Log the action
     addLogEntry('Opened Vonage dashboard for account top-up', 'info');
