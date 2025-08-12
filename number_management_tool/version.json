@@ -1,7 +1,26 @@
 {
-    "version": "2.2.0",
+    "version": "2.2.1",
     "release_date": "2025-01-12",
     "changelog": [
+        {
+            "version": "2.2.1",
+            "date": "2025-01-12",
+            "changes": [
+                {
+                    "type": "fix",
+                    "title": "Balance Validation Display Fix",
+                    "description": "Fixed insufficient balance warning to appear immediately in purchase modal instead of separate popup.",
+                    "details": [
+                        "Move balance warning to display inline at top of purchase confirmation modal",
+                        "Show insufficient balance warning immediately when modal opens",
+                        "Add proper timing to ensure DOM elements are rendered before validation",
+                        "Remove separate insufficient balance modal popup",
+                        "Disable Confirm Purchase button and change text when balance insufficient",
+                        "Add debug logging to track balance validation process"
+                    ]
+                }
+            ]
+        },
         {
             "version": "2.2.0",
             "date": "2025-01-12",
