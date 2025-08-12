@@ -580,6 +580,51 @@
         </div>
     </div>
 
+    <!-- Insufficient Balance Warning Modal -->
+    <div id="insufficientBalanceModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-exclamation-triangle"></i> Insufficient Account Balance</h3>
+                <span class="close" onclick="closeModal('insufficientBalanceModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="warning-box">
+                    <i class="fas fa-wallet"></i>
+                    <strong>Your account balance is insufficient for this purchase.</strong>
+                </div>
+                
+                <div class="balance-summary">
+                    <div class="summary-item">
+                        <strong>Current Balance:</strong> <span id="currentBalanceAmount">€0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <strong>Purchase Cost:</strong> <span id="requiredAmount">€0.00</span>
+                    </div>
+                    <div class="summary-item shortage">
+                        <strong>Shortage:</strong> <span id="shortageAmount">€0.00</span>
+                    </div>
+                </div>
+                
+                <div class="action-suggestion">
+                    <h4><i class="fas fa-credit-card"></i> Next Steps:</h4>
+                    <ul>
+                        <li>Top up your Vonage account balance</li>
+                        <li>Reduce the number of selected phone numbers</li>
+                        <li>Choose less expensive number options</li>
+                    </ul>
+                    
+                    <p><strong>Tip:</strong> You can top up your account through your Vonage dashboard or contact Vonage support for assistance.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal('insufficientBalanceModal')">Cancel Purchase</button>
+                <button class="btn btn-primary" onclick="openVonageTopUp()">
+                    <i class="fas fa-external-link-alt"></i> Top Up Account
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Warranty Disclaimer -->
     <footer class="warranty-disclaimer">
         <div class="disclaimer-content">

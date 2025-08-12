@@ -6,6 +6,7 @@ let selectedOwned = new Set();
 let selectedAvailable = new Set();
 let autoScroll = true;
 let logWebSocket = null;
+let currentAccountBalance = null;
 
 // Initialize application when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -515,6 +516,17 @@ async function buySelectedNumbers() {
         totalMonthly += parseFloat(number.cost || 0);
     });
     
+    // Check account balance before proceeding
+    if (currentAccountBalance && currentAccountBalance.value !== undefined) {
+        const currentBalance = parseFloat(currentAccountBalance.value);
+        
+        if (currentBalance < totalInitial) {
+            // Show insufficient balance warning
+            showInsufficientBalanceWarning(currentBalance, totalInitial, currentAccountBalance.currency || 'EUR');
+            return;
+        }
+    }
+    
     // Populate purchase modal
     document.getElementById('purchaseCount').textContent = selectedNumbers.length;
     document.getElementById('purchaseInitialCost').textContent = `€${totalInitial.toFixed(2)}`;
@@ -915,7 +927,11 @@ function displayAccountBalance(balance, error) {
     const balanceContainer = document.getElementById('accountBalance');
     if (!balanceContainer) return;
     
+    // Store balance globally for purchase validation
+    currentAccountBalance = balance;
+    
     if (error) {
+        currentAccountBalance = null;
         balanceContainer.innerHTML = `
             <div class="balance-placeholder">
                 <i class="fas fa-exclamation-triangle"></i> Error: ${error}
@@ -934,6 +950,7 @@ function displayAccountBalance(balance, error) {
             ${creditLimitDisplay}
         `;
     } else {
+        currentAccountBalance = null;
         balanceContainer.innerHTML = `
             <div class="balance-placeholder">
                 <i class="fas fa-question-circle"></i> Balance information not available
@@ -1133,4 +1150,32 @@ function showModal(modalId) {
 
 function closeModal(modalId) {
     document.getElementById(modalId).style.display = 'none';
+}
+
+// Balance validation functions
+function showInsufficientBalanceWarning(currentBalance, requiredAmount, currency) {
+    const currencySymbol = currency === 'EUR' ? '€' : currency === 'USD' ? '$' : currency === 'GBP' ? '£' : currency;
+    const shortage = requiredAmount - currentBalance;
+    
+    // Update modal content
+    document.getElementById('currentBalanceAmount').textContent = `${currencySymbol}${currentBalance.toFixed(2)}`;
+    document.getElementById('requiredAmount').textContent = `${currencySymbol}${requiredAmount.toFixed(2)}`;
+    document.getElementById('shortageAmount').textContent = `${currencySymbol}${shortage.toFixed(2)}`;
+    
+    // Show the insufficient balance modal
+    showModal('insufficientBalanceModal');
+    
+    // Log the insufficient balance warning
+    addLogEntry(`Insufficient balance: Need ${currencySymbol}${requiredAmount.toFixed(2)}, have ${currencySymbol}${currentBalance.toFixed(2)}`, 'warning');
+}
+
+function openVonageTopUp() {
+    // Open Vonage dashboard in a new tab for account top-up
+    window.open('https://dashboard.nexmo.com/billing', '_blank');
+    
+    // Close the insufficient balance modal
+    closeModal('insufficientBalanceModal');
+    
+    // Log the action
+    addLogEntry('Opened Vonage dashboard for account top-up', 'info');
 }
