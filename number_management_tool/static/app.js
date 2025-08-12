@@ -540,9 +540,11 @@ async function buySelectedNumbers() {
     showModal('purchaseModal');
     
     // Use setTimeout to ensure DOM is fully rendered before balance check
-    setTimeout(() => {
-        checkAndShowBalanceWarning(totalInitial, currentAccountBalance);
-    }, 50);
+    setTimeout(async () => {
+        console.log('About to check balance - currentAccountBalance:', currentAccountBalance);
+        console.log('Total initial cost:', totalInitial);
+        await checkAndShowBalanceWarning(totalInitial, currentAccountBalance);
+    }, 100);
 }
 
 async function loadSubaccounts() {
@@ -1148,7 +1150,7 @@ function closeModal(modalId) {
 }
 
 // Balance validation functions
-function checkAndShowBalanceWarning(requiredAmount, accountBalance) {
+async function checkAndShowBalanceWarning(requiredAmount, accountBalance) {
     const warningElement = document.getElementById('insufficientBalanceWarning');
     const confirmButton = document.querySelector('#purchaseModal .btn-success');
     
@@ -1169,9 +1171,28 @@ function checkAndShowBalanceWarning(requiredAmount, accountBalance) {
     confirmButton.disabled = false;
     confirmButton.innerHTML = '<i class="fas fa-check"></i> Confirm Purchase';
     
-    if (accountBalance && accountBalance.value !== undefined) {
-        const currentBalance = parseFloat(accountBalance.value);
-        const currency = accountBalance.currency || 'EUR';
+    // If no account balance is available, try to fetch it
+    let balanceToCheck = accountBalance;
+    if (!balanceToCheck || balanceToCheck.value === undefined) {
+        console.log('No cached balance, fetching fresh balance data...');
+        try {
+            const response = await fetch('/api/account/info');
+            if (response.ok) {
+                const data = await response.json();
+                if (data.success && data.data.balance) {
+                    balanceToCheck = data.data.balance;
+                    currentAccountBalance = balanceToCheck; // Update global cache
+                    console.log('Fetched fresh balance:', balanceToCheck);
+                }
+            }
+        } catch (error) {
+            console.error('Failed to fetch balance:', error);
+        }
+    }
+    
+    if (balanceToCheck && balanceToCheck.value !== undefined) {
+        const currentBalance = parseFloat(balanceToCheck.value);
+        const currency = balanceToCheck.currency || 'EUR';
         const currencySymbol = currency === 'EUR' ? '€' : currency === 'USD' ? '$' : currency === 'GBP' ? '£' : currency;
         
         console.log('Balance check:', {
@@ -1193,13 +1214,24 @@ function checkAndShowBalanceWarning(requiredAmount, accountBalance) {
             confirmButton.disabled = true;
             confirmButton.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Insufficient Balance';
             
-            console.log('Showing insufficient balance warning');
+            console.log('Showing insufficient balance warning - DOM elements updated');
             
             // Log the insufficient balance warning
             addLogEntry(`Insufficient balance: Need ${currencySymbol}${requiredAmount.toFixed(2)}, have ${currencySymbol}${currentBalance.toFixed(2)}`, 'warning');
+        } else {
+            console.log('Balance is sufficient:', currentBalance, '>=', requiredAmount);
         }
     } else {
-        console.log('No account balance available for validation');
+        console.log('Still no account balance available for validation after fetch attempt');
+        // Show a generic warning that balance couldn't be verified
+        warningElement.innerHTML = `
+            <div class="warning-box insufficient-balance">
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong>Unable to Verify Balance</strong>
+                <p>Could not verify your account balance. Please ensure you have sufficient funds before proceeding.</p>
+            </div>
+        `;
+        warningElement.style.display = 'block';
     }
 }
 
