@@ -533,13 +533,16 @@ async function buySelectedNumbers() {
         </tr>
     `).join('');
     
-    // Check account balance and show warning if insufficient
-    checkAndShowBalanceWarning(totalInitial, currentAccountBalance);
-    
     // Load subaccounts
     await loadSubaccounts();
     
+    // Show modal first
     showModal('purchaseModal');
+    
+    // Use setTimeout to ensure DOM is fully rendered before balance check
+    setTimeout(() => {
+        checkAndShowBalanceWarning(totalInitial, currentAccountBalance);
+    }, 50);
 }
 
 async function loadSubaccounts() {
@@ -1149,6 +1152,18 @@ function checkAndShowBalanceWarning(requiredAmount, accountBalance) {
     const warningElement = document.getElementById('insufficientBalanceWarning');
     const confirmButton = document.querySelector('#purchaseModal .btn-success');
     
+    console.log('checkAndShowBalanceWarning called:', {
+        requiredAmount,
+        accountBalance,
+        warningElement: !!warningElement,
+        confirmButton: !!confirmButton
+    });
+    
+    if (!warningElement || !confirmButton) {
+        console.error('Missing DOM elements for balance validation');
+        return;
+    }
+    
     // Hide warning by default
     warningElement.style.display = 'none';
     confirmButton.disabled = false;
@@ -1158,6 +1173,12 @@ function checkAndShowBalanceWarning(requiredAmount, accountBalance) {
         const currentBalance = parseFloat(accountBalance.value);
         const currency = accountBalance.currency || 'EUR';
         const currencySymbol = currency === 'EUR' ? '€' : currency === 'USD' ? '$' : currency === 'GBP' ? '£' : currency;
+        
+        console.log('Balance check:', {
+            currentBalance,
+            requiredAmount,
+            insufficient: currentBalance < requiredAmount
+        });
         
         if (currentBalance < requiredAmount) {
             const shortage = requiredAmount - currentBalance;
@@ -1172,9 +1193,13 @@ function checkAndShowBalanceWarning(requiredAmount, accountBalance) {
             confirmButton.disabled = true;
             confirmButton.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Insufficient Balance';
             
+            console.log('Showing insufficient balance warning');
+            
             // Log the insufficient balance warning
             addLogEntry(`Insufficient balance: Need ${currencySymbol}${requiredAmount.toFixed(2)}, have ${currencySymbol}${currentBalance.toFixed(2)}`, 'warning');
         }
+    } else {
+        console.log('No account balance available for validation');
     }
 }
 

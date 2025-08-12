@@ -264,13 +264,6 @@
                     <div class="summary-item">
                         <strong>Total monthly cost:</strong> <span id="purchaseMonthlyCost">€0.00</span>
                     </div>
-                    <div class="summary-item">
-                        <label for="subaccountSelect"><strong>Assign to subaccount:</strong></label>
-                        <select id="subaccountSelect">
-                            <option value="">Master Account (default)</option>
-                        </select>
-                        <small id="subaccountStatus">Loading subaccounts...</small>
-                    </div>
                 </div>
                 
                 <!-- Insufficient Balance Warning (hidden by default) -->
@@ -299,6 +292,16 @@
                         <button class="btn btn-primary btn-sm" onclick="openVonageTopUp()">
                             <i class="fas fa-external-link-alt"></i> Top Up Account
                         </button>
+                    </div>
+                </div>
+                
+                <div class="purchase-summary">
+                    <div class="summary-item">
+                        <label for="subaccountSelect"><strong>Assign to subaccount:</strong></label>
+                        <select id="subaccountSelect">
+                            <option value="">Master Account (default)</option>
+                        </select>
+                        <small id="subaccountStatus">Loading subaccounts...</small>
                     </div>
                 </div>
                 
